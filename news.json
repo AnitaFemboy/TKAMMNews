@@ -1,6 +1,4 @@
 {
-
-  
   "news": [
     {
       "id": 1,
@@ -8,18 +6,11 @@
       "title": "Version 5.0.0 Released",
       "message": "Hope you ENJOY as HELL ! Love you all ♥"
     },
-
-  "news": [
     {
       "id": 2,
       "date": "2026-07-27",
       "title": "Great NEWS !",
       "message": "so you really love this app ? right ? help us to improve it ! and be a part of it ❤"
     }
-
-
-
-
-
-    
+  ]
 }
