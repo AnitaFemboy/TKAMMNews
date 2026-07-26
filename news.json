@@ -1,64 +1,94 @@
 {
   "news": [
     {
-   
+      "id": 1,
       "date": "2026-07-26",
       "title": "Version 5.0.0 Released",
       "message": "Hope you ENJOY as HELL ! Love you all ♥"
     },
     {
-
+      "id": 2,
       "date": "2026-07-27",
       "title": "Great NEWS !",
       "message": "so you really love this app ? right ? help us to improve it ! and be a part of it ❤"
     },
     {
-
+      "id": 3,
       "date": "2026-07-27",
-      "title": "damn",
-      "message": "fuck news shits man its crazy hard"
-    }
-    ,
+      "title": "Damn !",
+      "message": "News system is crazy hard to implement!"
+    },
     {
-
+      "id": 4,
       "date": "2026-07-27",
-      "title": "damn",
-      "message": "fuck news shits man its crazy hard"
-    }
-    ,
+      "title": "New Features Coming",
+      "message": "We're working on some exciting new features for the next update!"
+    },
     {
-
-      "date": "2026-07-27",
-      "title": "damn",
-      "message": "fuck news shits man its crazy hard"
-    }
-    ,
+      "id": 5,
+      "date": "2026-07-28",
+      "title": "Community Feedback",
+      "message": "Thank you for all the feedback! We're listening to every suggestion."
+    },
     {
-
-      "date": "2026-07-27",
-      "title": "damn",
-      "message": "fuck news shits man its crazy hard"
-    }
-    ,
+      "id": 6,
+      "date": "2026-07-28",
+      "title": "Performance Update",
+      "message": "We've improved loading times and reduced memory usage significantly."
+    },
     {
-
-      "date": "2026-07-27",
-      "title": "damn",
-      "message": "fuck news shits man its crazy hard"
-    }
-    ,
+      "id": 7,
+      "date": "2026-07-28",
+      "title": "Bug Fixes",
+      "message": "Fixed several crashes and UI glitches reported by users."
+    },
     {
-
-      "date": "2026-07-27",
-      "title": "damn",
-      "message": "fuck news shits man its crazy hard"
-    }
-    ,
+      "id": 8,
+      "date": "2026-07-29",
+      "title": "Discord Server",
+      "message": "Join our Discord community for exclusive content and support!"
+    },
     {
-
-      "date": "2026-07-27",
-      "title": "damn",
-      "message": "fuck news shits man its crazy hard"
+      "id": 9,
+      "date": "2026-07-29",
+      "title": "Mod Support Added",
+      "message": "Now you can install and manage mods directly from the app!"
+    },
+    {
+      "id": 10,
+      "date": "2026-07-30",
+      "title": "New UI Design",
+      "message": "We've redesigned the interface for a more modern and clean look."
+    },
+    {
+      "id": 11,
+      "date": "2026-07-30",
+      "title": "Mobile App Coming",
+      "message": "A mobile version of the app is currently in development!"
+    },
+    {
+      "id": 12,
+      "date": "2026-07-31",
+      "title": "Giveaway Event",
+      "message": "Join our giveaway for a chance to win exclusive rewards!"
+    },
+    {
+      "id": 13,
+      "date": "2026-07-31",
+      "title": "Translation Update",
+      "message": "Added support for multiple languages. Help us translate!"
+    },
+    {
+      "id": 14,
+      "date": "2026-08-01",
+      "title": "Security Update",
+      "message": "Important security patches have been applied. Update now!"
+    },
+    {
+      "id": 15,
+      "date": "2026-08-01",
+      "title": "What's Next?",
+      "message": "Big things are coming! Stay tuned for the next major announcement."
     }
   ]
 }
