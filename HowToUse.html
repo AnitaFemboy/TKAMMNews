@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>TKA Mod Manager · complete guide</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --primary: #ff69b4;
+      --secondary: #ba55d3;
+      --tertiary: #ff8ed4;
+      --dark: #1e1e2f;
+      --darker: #171723;
+      --card-bg: #2a2a3f;
+      --text: #f0f0f0;
+      --accent: #ff1493;
+      --success: #32cd32;
+      --warning: #ff4500;
+      --info: #1e90ff;
+      --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, var(--darker) 0%, var(--dark) 100%);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      padding: 20px;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    .floating-shapes {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .shape {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 105, 180, 0.08);
+      animation: float 22s infinite linear;
+    }
+
+    .shape:nth-child(1) {
+      width: 80px;
+      height: 80px;
+      top: 10%;
+      left: 10%;
+      animation-duration: 26s;
+    }
+
+    .shape:nth-child(2) {
+      width: 120px;
+      height: 120px;
+      top: 60%;
+      left: 80%;
+      animation-duration: 31s;
+      background: rgba(186, 85, 211, 0.08);
+    }
+
+    .shape:nth-child(3) {
+      width: 60px;
+      height: 60px;
+      top: 80%;
+      left: 20%;
+      animation-duration: 19s;
+      background: rgba(255, 20, 147, 0.08);
+    }
+
+    .shape:nth-child(4) {
+      width: 100px;
+      height: 100px;
+      top: 30%;
+      left: 70%;
+      animation-duration: 36s;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-18px) rotate(180deg);
+      }
+      100% {
+        transform: translateY(0) rotate(360deg);
+      }
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 40px 20px;
+      background: rgba(42, 42, 63, 0.8);
+      backdrop-filter: blur(12px);
+      border-radius: 25px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: var(--gradient);
+    }
+
+    h1 {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 12px rgba(255, 105, 180, 0.25);
+      font-weight: 800;
+    }
+
+    .subtitle {
+      color: var(--tertiary);
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      font-weight: 300;
+    }
+
+    .hero-icon {
+      font-size: 5rem;
+      margin-bottom: 20px;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+      display: inline-block;
+      animation: bounce 2s infinite alternate;
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: rgba(42, 42, 63, 0.8);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 25px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--gradient);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 18px 35px rgba(0, 0, 0, 0.4);
+    }
+
+    .card-icon {
+      font-size: 2.8rem;
+      margin-bottom: 15px;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .card h2 {
+      color: var(--tertiary);
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .card p {
+      margin-bottom: 10px;
+    }
+
+    .tip {
+      color: var(--success);
+      font-weight: bold;
+      background: rgba(50, 205, 50, 0.08);
+      padding: 8px 12px;
+      border-radius: 8px;
+      margin-top: 10px;
+      display: inline-block;
+      border-left: 3px solid var(--success);
+    }
+
+    .highlight {
+      color: var(--info);
+      font-weight: bold;
+    }
+
+    .warning-box {
+      background: rgba(255, 69, 0, 0.08);
+      border-left: 4px solid var(--warning);
+      padding: 20px;
+      border-radius: 8px;
+      margin: 25px 0;
+      backdrop-filter: blur(5px);
+    }
+
+    .warning-box h3 {
+      color: var(--warning);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .important-structure {
+      background: rgba(30, 144, 255, 0.08);
+      border-left: 5px solid var(--info);
+      padding: 20px 25px;
+      border-radius: 16px;
+      margin: 25px 0;
+      backdrop-filter: blur(8px);
+    }
+
+    .important-structure h3 {
+      color: var(--info);
+      margin-bottom: 15px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.4rem;
+    }
+
+    .code-block {
+      background: #0d0d1a;
+      border-radius: 14px;
+      padding: 16px;
+      font-family: 'Cascadia Code', 'Fira Code', monospace;
+      font-size: 0.9rem;
+      color: #ddd;
+      margin: 15px 0;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      white-space: pre;
+      overflow-x: auto;
+    }
+
+    .notes-section {
+      background: rgba(42, 42, 63, 0.8);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 40px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .notes-section h2 {
+      color: var(--secondary);
+      margin-bottom: 20px;
+      text-align: center;
+      font-size: 1.8rem;
+    }
+
+    .notes-list {
+      list-style: none;
+    }
+
+    .notes-list li {
+      margin-bottom: 12px;
+      padding-left: 30px;
+      position: relative;
+    }
+
+    .notes-list li:before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--success);
+      font-weight: bold;
+      background: rgba(50, 205, 50, 0.1);
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .about {
+      background: rgba(42, 42, 63, 0.8);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      border-top: 3px solid var(--primary);
+      margin-bottom: 30px;
+    }
+
+    .about h2 {
+      color: var(--primary);
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .about-item {
+      text-align: left;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .about-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .about-item span {
+      color: var(--accent);
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    a {
+      color: var(--info);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+
+    .copyright {
+      margin-top: 20px;
+      color: var(--secondary);
+      font-size: 0.9rem;
+    }
+
+    .heart {
+      color: var(--primary);
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--gradient);
+      color: white;
+      padding: 3px 8px;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+
+    .featured-card {
+      grid-column: span 2;
+      background: linear-gradient(135deg, rgba(42, 42, 63, 0.9) 0%, rgba(42, 42, 63, 0.7) 100%);
+    }
+
+    .license-section {
+      background: rgba(42, 42, 63, 0.8);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 30px;
+      margin-bottom: 40px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .license-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      padding: 15px 0;
+    }
+
+    .license-header h2 {
+      color: var(--secondary);
+      font-size: 1.8rem;
+      margin: 0;
+    }
+
+    .license-toggle {
+      font-size: 1.5rem;
+      color: var(--primary);
+      transition: transform 0.3s ease;
+    }
+
+    .license-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+      margin-top: 20px;
+    }
+
+    .license-content.expanded {
+      max-height: 800px;
+      overflow-y: auto;
+    }
+
+    .license-content pre {
+      white-space: pre-wrap;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      color: var(--text);
+      background: rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      border-radius: 10px;
+      border-left: 3px solid var(--primary);
+    }
+
+    .signatures {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 30px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 20px;
+    }
+
+    .signature-box {
+      text-align: center;
+    }
+
+    .signature-line {
+      border-top: 1px solid var(--text);
+      width: 200px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .featured-card {
+        grid-column: span 1;
+      }
+      h1 {
+        font-size: 2.2rem;
+      }
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      .signatures {
+        flex-direction: column;
+        gap: 20px;
+      }
+      .signature-line {
+        width: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="floating-shapes">
+  <div class="shape"></div>
+  <div class="shape"></div>
+  <div class="shape"></div>
+  <div class="shape"></div>
+</div>
+
+<div class="container">
+  <header>
+    <div class="hero-icon"><i class="fas fa-puzzle-piece"></i></div>
+    <h1>TKA Mod Manager</h1>
+    <p class="subtitle">Your complete guide to managing mods for The Killing Antidote</p>
+  </header>
+
+  <!-- UE4SS & STRUCTURE IMPORTANT SECTION (new, placed prominently) -->
+  <div class="important-structure">
+    <h3><i class="fas fa-exclamation-circle"></i> UE4SS & archive structure (must read)</h3>
+    <p style="margin-bottom: 12px;"><span class="highlight">If a mod requires UE4SS</span> (or uses UE4SS scripts), you <strong>must</strong> provide a <code>config.ini</code> file with this exact structure:</p>
+    <div class="code-block">[Mod]
+script=<span style="color:#ff8ed4;">name_of_script_folder</span></div>
+    <p>The <span class="highlight">script folder</span> must be placed inside <strong>Your Mod folder</strong>, for example:</p>
+
+    <div class="code-block">📦 archive.zip
+├── Mainfile.pak
+├── 📁 scriptfolder(contains "Scripts" folder and etc...)
+│   └── Scripts
+│   └──etc...
+├── config.ini
+</div>
+    
+    <p style="margin-top: 18px;"><strong>ZIP / RAR / 7z archive rules:</strong></p>
+    <ul style="margin-left: 20px; margin-bottom: 10px; list-style-type: '👉 '; color: #ccc;">
+      <li><strong>.pak</strong> and <strong>.mp4</strong> files must be <span class="highlight">directly inside the archive</span> (not inside a folder).</li>
+      <li>If your mod has <strong>multiple variants</strong> (user must pick one), structure the archive like this:</li>
+    </ul>
+    
+    <div class="code-block">📦 archive.zip
+├── main_file.pak
+├── 📁 folder_option1
+│   └── file1.pak
+├── 📁 folder_option2
+│   └── file2.pak</div>
+    
+    <p style="margin-top: 12px;"><span class="highlight">❌ Wrong structure (do NOT use):</span></p>
+    <div class="code-block">📦 archive.zip
+├── 📁 some_folder
+│   └── main_file.pak
+├── 📁 folder_option1
+│   └── file1.pak
+├── 📁 folder_option2
+│   └── file2.pak</div>
+
+
+    <div class="code-block">📦 archive.zip
+├──📁 some_folder
+│  └── main_file.pak
+│     📁 folder_option1
+│     └── file1.pak
+│     📁 folder_option2
+│     └── file2.pak</div>
+
+    
+    <p style="margin-top: 15px;"><strong>For <code>.mp4</code> files:</strong> it’s okay, you can place them anywhere you want inside the archive.</p>
+    <p class="tip" style="margin-top: 10px;"><i class="fas fa-check-circle"></i> Correct structure ensures mods are detected and installed without issues.</p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-plus-circle"></i></div>
+      <h2>Add Mods <span class="badge">Quick</span></h2>
+      <p>Click <b>Add Mod</b> or drag & drop <b>.zip</b> / <b>.rar</b> files onto the app.</p>
+      <p>You can add multiple files at once. Mods are extracted automatically to the <b>mods</b> folder.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-folder-open"></i></div>
+      <h2>Select Mod Folder</h2>
+      <p>If a package contains multiple folders, choose the one containing the main files (<b>.pak</b>).</p>
+      <p class="tip">This folder will appear in your <b>mods</b> directory automatically.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-toggle-on"></i></div>
+      <h2>Enabling Mods</h2>
+      <p>Use the toggle to <b>enable or disable</b> a mod.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-toggle-off"></i></div>
+      <h2>Disabling Mods</h2>
+      <p>Toggle off a mod to disable it. All installed files of that mod will be removed.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-trash-alt"></i></div>
+      <h2>Deleting Mods</h2>
+      <p>Right-click a mod in the list → <b>Delete Mod</b>. This removes it completely from your mods list.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-cog"></i></div>
+      <h2>Settings <span class="badge">Important</span></h2>
+      <p>Configure the <b>Game Path</b> where <b>TheKillingAntidote.exe</b> is located and choose language.</p>
+      <p>Also you can choose your custom language.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-folder"></i></div>
+      <h2>Open Mods Folder</h2>
+      <p>Click on <b>All Mods</b> to view all your imported mods.</p>
+      <p>Right Click on <b>any mod</b> to open the content of imported mod folder.</p>
+      <p>Click on <b>Installed Mods</b> to view all your installed mods inside the game.</p>
+    </div>
+
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-mouse-pointer"></i></div>
+      <h2>Drag & Drop</h2>
+      <p>Drag <b>.zip</b>, <b>.rar</b> or <b>.7z</b> files directly onto the app to add mods.</p>
+    </div>
+
+    <div class="card featured-card">
+      <div class="card-icon"><i class="fas fa-bolt"></i></div>
+      <h2>64-bit Optimized <span class="badge">New</span></h2>
+      <p>Built for modern systems with enhanced performance, stability, and memory handling for seamless mod management.</p>
+      <p class="tip">Experience faster loading times and smoother operation with our optimized architecture.</p>
+    </div>
+  </div>
+
+  <div class="notes-section">
+    <h2><i class="fas fa-sticky-note"></i> Notes & Tips</h2>
+    <ul class="notes-list">
+      <li>Only <b>.pak</b> and <b>.mp4</b> files are supported.</li>
+      <li>Choose carefully if multiple folders appear.</li>
+      <li>Backup mods before overwriting.</li>
+      <li>You can archive all .pak and .mp4 files in 1 zip/rar/7z file and install at the same time.</li>
+    </ul>
+  </div>
+
+  <div class="warning-box">
+    <h3><i class="fas fa-exclamation-triangle"></i> How to update:</h3>
+    <p>Just copy paste then replace it all with old files :) easy.</p>
+  </div>
+
+  <div class="card" style="text-align: center; margin-top: 30px;">
+    <div class="card-icon"><i class="fas fa-heart"></i></div>
+    <h2>Enjoy Safe & Easy Mod Management!</h2>
+    <p>Thank you for using The Killing Antidote Mod Manager</p>
+  </div>
+
+  <!-- License Agreement Section -->
+  <div class="license-section">
+    <div class="license-header" id="licenseToggle">
+      <h2><i class="fas fa-file-contract"></i> License Agreement</h2>
+      <div class="license-toggle"><i class="fas fa-chevron-down" id="licenseToggleIcon"></i></div>
+    </div>
+    <div class="license-content" id="licenseContent">
+            <pre>
+TKA MOD MANAGER LICENSE AGREEMENT
+Author: Anita Femboy
+All Rights Reserved
+
+Effective Date: September 01, 2025
+Author Jurisdiction: United States of America
+
+1. DEFINITIONS
+   1.1 "Software" means TKA Mod Manager and all executable binaries, object code, source code, libraries, modules, updates, patches, plugins, installers, installers' scripts, assets, graphics, icons, audio, documentation, user guides, help files, technical notes, and any derivative works, in whatever form provided.
+   1.2 "Author" means Anita Femboy, the sole owner and licensor of the Software and all associated intellectual property.
+   1.3 "Licensee" or "You" means the individual or entity that installs, uses, or receives the Software.
+   1.4 "Permitted Purpose" means use of the Software solely to manage game modifications (mods) for the video game The Killing Antidote, and only as expressly permitted by this Agreement.
+   1.5 "Confidential Information" means non-public technical or business information disclosed by Author in any form relating to the Software, including but not limited to source code, object code, algorithms, design, internal interfaces, activation mechanisms, internal data formats, telemetry, and security measures.
+
+2. GRANT OF LICENSE
+   2.1 Subject to full compliance with this Agreement, the Author grants the Licensee a limited, non-exclusive, non-transferable, non-sublicensable, personal, revocable license to use the Software solely for the Permitted Purpose.
+   2.2 This license does not grant any ownership rights, title, or interest in the Software or any related intellectual property. All rights not expressly granted are reserved by the Author.
+
+3. SCOPE AND LIMITATIONS
+   3.1 Prohibited Acts. Except as expressly permitted in this Agreement, the Licensee shall not, and shall not permit any third party to:
+   a) copy, reproduce, distribute, rent, lease, lend, sell, sublicense, host, mirror, or otherwise transfer the Software or any part thereof;
+   b) modify, translate, adapt, alter, patch, merge, create derivative works of, or otherwise change the Software;
+   c) decompile, disassemble, reverse engineer, decrypt, deobfuscate, or otherwise attempt to derive the source code or underlying structure, algorithms or logic of the Software;
+   d) remove, modify, tamper with, bypass or disable any license key, activation, registration, digital rights management (DRM), tamper-evident mechanisms, watermarking, telemetry, anti-debugging protections, or other security features embedded in the Software;
+   e) include or bundle the Software with any third-party product, distribution, mod pack, collection, or media without the prior written consent of the Author;
+   f) publicly reveal, publish, broadcast, stream, record, screenshot, or otherwise disclose any aspect of the Software's interface, workflow, internal operation, documentation, or Confidential Information;
+   g) use the Software for any commercial purpose, including but not limited to resale, rental, hosting, enterprise deployment, provision of paid services, monetized streaming, or incorporation into paid content;
+   h) attempt to circumvent any technical, contractual, or legal protection afforded to the Software; or
+   i) permit access to or usage of the Software by any third party.
+
+3.2 Non-Transferability. The license is personal to the Licensee. The Licensee may not assign, sell, transfer, encumber, pledge, sub-license or otherwise convey the Software or any rights granted hereunder, in whole or in part.
+
+4. CONFIDENTIALITY
+   4.1 The Software, including all non-public functionality and technical details, is Confidential Information. The Licensee shall hold Confidential Information in strict confidence, shall not disclose it to any third party, and shall use it solely for the Permitted Purpose.
+   4.2 The Licensee shall implement and maintain reasonable administrative, physical and technical safeguards to prevent unauthorized disclosure or use of Confidential Information.
+   4.3 Confidentiality obligations survive termination or expiration of this Agreement.
+
+5. AUDIT, COMPLIANCE AND VERIFICATION
+   5.1 The Author reserves the right to audit, inspect, or require verification of any system, device, or environment where the Software is installed or used, to confirm compliance with this Agreement. The Licensee must cooperate fully and promptly with any such audit or request for information.
+   5.2 The Author may, at its sole discretion, require proof of deletion, secure erasure, or certification of destruction of all copies of the Software upon termination or upon reasonable request.
+
+6. TELEMETRY, DATA COLLECTION AND PRIVACY
+   6.1 The Software may include telemetry, usage reporting, activation or anti-piracy features that collect technical, usage, diagnostic, crash, license, or device information. By installing or using the Software, the Licensee consents to such collection, transmission, storage, and processing by the Author for purposes including license enforcement, security, product improvement, and analytics.
+   6.2 The Author will use and retain collected data in accordance with applicable law. The Licensee acknowledges that telemetry, logging, or remote verification mechanisms may detect or prevent unauthorized copying, distribution, modification, or misuse of the Software.
+   6.3 The Author is not the controller of any personal data that the Licensee chooses to upload or that is generated by the Licensee's use of the Software; Licensee remains responsible for compliance with any privacy laws applicable to such data.
+
+7. UPDATES, PATCHES AND SUPPORT
+   7.1 The Author may provide updates, patches, or new versions of the Software at its discretion. All updates are subject to the terms of this Agreement unless a separate license accompanies an update.
+   7.2 The Author has no obligation to provide maintenance, support, updates, or bug fixes unless agreed in writing.
+
+8. TERM AND TERMINATION
+   8.1 This Agreement is effective upon installation, copying, or use of the Software by the Licensee and continues until terminated.
+   8.2 This Agreement and the license granted hereunder shall terminate automatically, without notice, upon any breach by the Licensee of any term, condition, or restriction herein.
+   8.3 Upon termination for any reason, the Licensee must immediately cease using the Software and permanently delete or destroy all copies, full or partial, including backups, and provide written certification of deletion if requested by the Author.
+   8.4 Termination does not limit the Author's right to pursue any other remedies available at law or equity for breach.
+
+9. REMEDIES, INJUNCTIVE RELIEF AND ENFORCEMENT
+   9.1 The Licensee acknowledges that unauthorized use, disclosure, distribution, modification, or reverse engineering of the Software would cause irreparable injury to the Author for which monetary damages would be inadequate. The Author shall be entitled to seek injunctive relief, including temporary restraining orders and preliminary and permanent injunctive relief, without posting bond, in addition to any other remedies available under law or in equity.
+   9.2 The Author may pursue all available legal and equitable remedies, including statutory damages, exemplary or punitive damages where permitted by law, and recovery of attorneys' fees, costs, and expenses incurred in enforcing this Agreement.
+
+10. INDEMNIFICATION
+    10.1 The Licensee shall indemnify, defend and hold harmless the Author and its officers, agents, employees and representatives from and against any and all claims, liabilities, damages, losses, costs and expenses (including reasonable attorneys' fees and court costs) arising out of or related to the Licensee's: (a) breach of this Agreement; (b) unauthorized use, distribution, modification, or disclosure of the Software; (c) use of the Software in violation of applicable law; or (d) any negligence, willful misconduct or fraud in connection with the Software.
+
+11. WARRANTY DISCLAIMER
+    11.1 THE SOFTWARE IS PROVIDED "AS IS", "WITH ALL FAULTS" AND "AS AVAILABLE". THE AUTHOR EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, QUIET ENJOYMENT, TITLE, AND NON-INFRINGEMENT, AND ANY WARRANTIES ARISING FROM COURSE OF DEALING, COURSE OF PERFORMANCE, OR USAGE IN TRADE.
+    11.2 THE AUTHOR DOES NOT WARRANT THAT THE SOFTWARE WILL MEET LICENSEE'S REQUIREMENTS, BE UNINTERRUPTED, TIMELY, SECURE, ERROR-FREE, OR FREE FROM VULNERABILITIES.
+
+12. LIMITATION OF LIABILITY
+    12.1 TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, LOSS OF DATA, LOSS OF USE, INTERRUPTION OF BUSINESS, OR COST OF PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES, ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT OR THE SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+    12.2 IN NO EVENT SHALL THE AUTHOR'S AGGREGATE LIABILITY ARISING OUT OF OR RELATED TO THIS AGREEMENT EXCEED THE GREATER OF (A) THE AMOUNT PAID BY LICENSEE TO THE AUTHOR FOR THE SOFTWARE IN THE TWELVE (12) MONTHS PRIOR TO THE CLAIM, OR (B) ONE HUNDRED U.S. DOLLARS (USD 100). THE FOREGOING LIMITATION SHALL APPLY NOTWITHSTANDING THE FAILURE OF ESSENTIAL PURPOSE OF ANY LIMITED REMEDY.
+
+13. EXPORT, SANCTIONS AND COMPLIANCE
+    13.1 The Licensee shall comply with all applicable export control laws and sanctions regimes. The Software may be subject to export control laws. The Licensee warrants that it is not located in, under the control of, or a national or resident of any country subject to comprehensive U.S., EU or other applicable sanctions, and shall not use or transfer the Software in violation of such laws.
+    13.2 The Licensee shall comply with all applicable laws, rules and regulations in connection with its use of the Software.
+
+14. THIRD-PARTY COMPONENTS
+    14.1 The Software may incorporate third-party software, libraries, or components subject to separate license terms. Licensee agrees to comply with any such third-party license terms. To the extent any third-party license imposes additional obligations, such obligations shall be binding on the Licensee.
+
+15. FEEDBACK
+    15.1 Any feedback, suggestions, or ideas provided by the Licensee relating to the Software ("Feedback") shall be the exclusive property of the Author. By submitting Feedback, the Licensee assigns to the Author all right, title and interest in and to the Feedback, and authorizes the Author to use, modify, and commercialize the Feedback without restriction or remuneration.
+
+16. NOTICES
+    16.1 All notices required or permitted should be in writing and delivered electronically to the Author at the contact information provided with the Software or to such other address as the Author designates. Notice shall be deemed given when delivered by confirmed electronic transmission or forty-eight (48) hours after deposit with an internationally recognized overnight courier service.
+
+17. SEVERABILITY, WAIVER, ASSIGNMENT
+    17.1 If any provision of this Agreement is held invalid or unenforceable, the remaining provisions shall remain in full force and effect. The parties agree to replace any invalid provision with a valid provision that most closely approximates the intent and economic effect of the invalid provision.
+    17.2 No waiver by the Author of any breach shall constitute a waiver of any other or subsequent breach.
+    17.3 The Licensee may not assign or transfer this Agreement or any rights hereunder without the prior written consent of the Author. Any attempted assignment without such consent is null and void.
+
+18. SURVIVAL
+    18.1 The provisions of Sections 1, 3, 4, 5, 6, 8, 9, 10, 11, 12, 14, 15, 17 and 19 shall survive termination or expiration of this Agreement.
+
+19. GOVERNING LAW, JURISDICTION AND INTERNATIONAL ENFORCEMENT
+    19.1 This Agreement shall be governed by and construed in accordance with the laws of the Author Jurisdiction specified above, without regard to conflict of laws principles.
+    19.2 The parties submit to the exclusive jurisdiction and venue of the competent courts of the Author Jurisdiction for resolution of any disputes arising out of or related to this Agreement. The Author shall be entitled to seek enforcement of any judgment or order in any other jurisdiction and may pursue cross-border enforcement under international treaties and conventions including, where applicable, the Berne Convention, TRIPS Agreement, and WIPO treaties.
+    19.3 Nothing in this Section limits the Author's right to seek provisional or protective measures (including ex parte relief) in any jurisdiction.
+
+20. REMEDIES CUMULATIVE
+    20.1 All remedies contained in this Agreement are cumulative and in addition to any other remedies available at law or in equity.
+
+21. ENTIRE AGREEMENT
+    21.1 This Agreement constitutes the entire agreement between the parties concerning the Software and supersedes all prior or contemporaneous agreements, understandings, representations and communications, whether oral or written, relating thereto. Any modifications or exceptions must be made in a written instrument signed by an authorized representative of the Author.
+
+22. ACCEPTANCE
+    22.1 By installing, copying, executing, accessing, or using the Software in any manner, the Licensee acknowledges that it has read, understood, and agreed to be bound by all terms and conditions of this Agreement. If the Licensee does not agree to these terms, the Licensee must immediately cease installation and use and delete all copies of the Software.
+
+23. MISCELLANEOUS
+    23.1 Remedies for breach may include injunctive relief, seizure, and permanent injunction prohibiting use or distribution.
+    23.2 The Author may modify, update, or replace this Agreement at any time for future distributions of the Software; such changes will not retroactively alter rights granted prior to modification absent the Author's express written notice.
+
+Author contact: Anita Femboy
+All rights reserved.
+
+<div class="signatures">
+  <div class="signature-box">
+    <p>Signature (Author):</p>
+    <div class="signature-line"></div>
+    <p>Anita Femboy</p>
+    <p>Date: September 01, 2025</p>
+  </div>
+  <div class="signature-box">
+    <p>Signature (Licensee):</p>
+    <div class="signature-line"></div>
+    <p>End User</p>
+    <p>Date: September 01, 2025</p>
+  </div>
+</div>
+            </pre>
+    </div>
+  </div>
+
+  <div class="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <div class="about-item">
+        <span>Creator:</span>
+        Anita Femboy <span class="heart">♥</span>
+      </div>
+      <div class="about-item">
+        <span>Instagram:</span>
+        <a href="https://www.instagram.com/Anita.Femboy/" target="_blank">@Anita.Femboy</a>
+      </div>
+      <div class="about-item">
+        <span>Email:</span>
+        <a href="mailto:cutegirl2077x@gmail.com">cutegirl2077x@gmail.com</a>
+      </div>
+      <div class="about-item">
+        <span>Feedback:</span>
+        <a href="https://www.nexusmods.com/thekillingantidote/mods/421?tab=bugs" target="_blank">Submit Here</a>
+      </div>
+      <div class="about-item">
+        <span>Telegram:</span>
+        <a href="https://t.me/anitafemboy" target="_blank">@AnitaFemboy</a>
+      </div>
+    </div>
+    <div class="copyright">
+      Copyright © Anita Corporation
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const cards = document.querySelectorAll('.card');
+    const shapes = document.querySelectorAll('.shape');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    cards.forEach(card => {
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(20px)';
+      card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      observer.observe(card);
+    });
+
+    shapes.forEach(shape => {
+      const randomX = Math.random() * 20 - 10;
+      const randomY = Math.random() * 20 - 10;
+      shape.style.transform = `translate(${randomX}px, ${randomY}px)`;
+    });
+
+    const licenseToggle = document.getElementById('licenseToggle');
+    const licenseContent = document.getElementById('licenseContent');
+    const licenseToggleIcon = document.getElementById('licenseToggleIcon');
+
+    licenseToggle.addEventListener('click', function() {
+      licenseContent.classList.toggle('expanded');
+      if (licenseContent.classList.contains('expanded')) {
+        licenseToggleIcon.classList.remove('fa-chevron-down');
+        licenseToggleIcon.classList.add('fa-chevron-up');
+      } else {
+        licenseToggleIcon.classList.remove('fa-chevron-up');
+        licenseToggleIcon.classList.add('fa-chevron-down');
+      }
+    });
+  });
+</script>
+</body>
+</html>
