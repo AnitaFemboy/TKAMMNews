@@ -30,6 +30,10 @@
       --radius-xl: 32px;
       --radius-lg: 24px;
       --radius-md: 16px;
+      
+      /* donation button specific */
+      --donation-bg: #ff69b4;
+      --donation-hover: #ff1493;
     }
 
     body {
@@ -403,10 +407,92 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    /* ========== FLOATING DONATION BUTTON ========== */
+    .floating-donate {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #ff69b4, #ba55d3);
+      color: white;
+      text-decoration: none;
+      border-radius: 100px;
+      padding: 16px 28px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      letter-spacing: 0.5px;
+      box-shadow: 0 12px 30px rgba(255, 105, 180, 0.5), 0 0 0 0 rgba(255, 105, 180, 0.7);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      transition: all 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.1);
+      animation: donatePulse 2.2s infinite ease-in-out;
+      gap: 12px;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .floating-donate i {
+      font-size: 1.4rem;
+      filter: drop-shadow(0 2px 6px rgba(0,0,0,0.3));
+      animation: heartBeat 1.4s infinite;
+    }
+
+    .floating-donate:hover {
+      transform: translateY(-6px) scale(1.05);
+      box-shadow: 0 24px 40px rgba(255, 20, 147, 0.7), 0 0 0 8px rgba(255, 105, 180, 0.2);
+      background: linear-gradient(135deg, #ff1493, #9932cc);
+      border-color: rgba(255, 255, 255, 0.5);
+      color: #fff;
+      text-shadow: 0 0 8px rgba(255,255,255,0.5);
+    }
+
+    .floating-donate:active {
+      transform: translateY(0px) scale(0.98);
+      transition: 0.1s;
+    }
+
+    /* subtle pulse animation */
+    @keyframes donatePulse {
+      0% { box-shadow: 0 12px 30px rgba(255, 105, 180, 0.5), 0 0 0 0 rgba(255, 105, 180, 0.7); }
+      70% { box-shadow: 0 12px 30px rgba(255, 105, 180, 0.6), 0 0 0 18px rgba(255, 105, 180, 0); }
+      100% { box-shadow: 0 12px 30px rgba(255, 105, 180, 0.5), 0 0 0 0 rgba(255, 105, 180, 0); }
+    }
+
+    @keyframes heartBeat {
+      0% { transform: scale(1); }
+      15% { transform: scale(1.2); }
+      30% { transform: scale(1); }
+      45% { transform: scale(1.15); }
+      60% { transform: scale(1); }
+      100% { transform: scale(1); }
+    }
+
+    /* mobile adjustment */
+    @media (max-width: 600px) {
+      .floating-donate {
+        bottom: 20px;
+        right: 20px;
+        padding: 14px 22px;
+        font-size: 1rem;
+        gap: 8px;
+      }
+      .floating-donate i {
+        font-size: 1.2rem;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="orb"></div><div class="orb"></div><div class="orb"></div>
+
+  <!-- ========== FLOATING DONATION BUTTON ========== -->
+  <a href="https://anitafemboy.github.io/TKAMMNews/Donation.html" target="_blank" class="floating-donate" title="Support the project 💖">
+    <i class="fas fa-heart"></i> <span>Donate</span>
+  </a>
 
   <div class="container">
     <!-- HERO -->
@@ -425,7 +511,6 @@
 
     <!-- STRUCTURE (anchor) -->
     <div id="structure" class="structure-card reveal">
-
       <div class="title"><i class="fas fa-exclamation-triangle"></i> UE4SS · archive structure <span class="pill-badge">must read</span></div>
       <p style="margin-bottom: 14px;"><span style="color:var(--info);font-weight:600;">If a mod requires UE4SS</span> (or uses UE4SS scripts), you <strong>must</strong> provide a <code>config.ini</code> with this structure:</p>
       <div class="code-block">[Mod]<br>script=<span class="hl">name_of_script_folder</span></div>
@@ -452,7 +537,7 @@
       <div class="feature-card"><div class="icon"><i class="fas fa-trash-alt"></i></div><h3>Delete Mods</h3><p>Right‑click a mod → <b>Delete Mod</b>. Removes it completely from your list.</p></div>
       <div class="feature-card"><div class="icon"><i class="fas fa-cog"></i></div><h3>Settings <span class="pill-badge">Game path</span></h3><p>Set <b>Game Path</b> to <code>TheKillingAntidote.exe</code>, Choose your custom Mods path and your language.</p></div>
       <div class="feature-card"><div class="icon"><i class="fas fa-folder"></i></div><h3>Open Mods Folder</h3><p>Click <b>All Mods</b> to view imported mods. Right‑click any mod to open its folder.</p></div>
- <div class="feature-card"><div class="icon"><i class="fas fa-folder"></i></div><h3>Open ~Mods Folder</h3><p>Click <b>Installed Mods</b> to view any installed mods.</p></div>
+      <div class="feature-card"><div class="icon"><i class="fas fa-folder"></i></div><h3>Open ~Mods Folder</h3><p>Click <b>Installed Mods</b> to view any installed mods.</p></div>
       <div class="feature-card"><div class="icon"><i class="fas fa-mouse-pointer"></i></div><h3>Drag &amp; Drop</h3><p>Drag <b>.zip</b>, <b>.rar</b> or <b>.7z</b> directly onto the app – super smooth.</p></div>
       <div class="feature-card span-2"><div class="icon"><i class="fas fa-rocket"></i></div><h3>64‑bit Optimized <span class="pill-badge">next‑gen</span></h3><p>Built for modern systems with enhanced performance, stability and memory handling. Faster loading, smoother operation.</p><div class="tip"><i class="fas fa-bolt"></i> experience the speed</div></div>
     </div>
