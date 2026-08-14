@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>WFF Mod Manager · Ultimate Guide & Tools</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    :root {
+      --blue-primary: #2a6df4;
+      --blue-light: #5b9dff;
+      --blue-soft: #8bb8ff;
+      --cyan-glow: #48cae4;
+      --pink-accent: #f472b6;
+      --orange-accent: #ff9f43;
+      --green-accent: #2dd4a0;
+      --red-donate: #ef4444;
+      --dark-bg: #070b14;
+      --dark-card: #0d1420;
+      --dark-elevated: #111a2b;
+      --text-bright: #f0f4ff;
+      --text-muted: #c0cce0;
+      --border-glow: rgba(74, 144, 226, 0.25);
+      --gradient-blue: linear-gradient(135deg, #2a6df4, #4a9eff);
+      --success: #2dd4a0;
+      --warning: #ffb86b;
+      --shadow-glow: 0 10px 35px rgba(0, 80, 200, 0.3);
+      --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: radial-gradient(circle at 10% 20%, #0f182a, #05080f 90%);
+      color: var(--text-bright);
+      line-height: 1.6;
+      min-height: 100vh;
+      padding: 1.5rem;
+      position: relative;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* floating orbs with more colors */
+    .floating-shapes {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .shape {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      animation: float 30s infinite linear;
+      opacity: 0.7;
+    }
+    .shape:nth-child(1) { width: 240px; height: 240px; top: -5%; left: 5%; animation-duration: 32s; background: rgba(42, 109, 244, 0.25); }
+    .shape:nth-child(2) { width: 300px; height: 300px; top: 60%; left: 80%; animation-duration: 38s; background: rgba(244, 114, 182, 0.15); }
+    .shape:nth-child(3) { width: 180px; height: 180px; top: 75%; left: 10%; animation-duration: 24s; background: rgba(255, 159, 67, 0.12); }
+    .shape:nth-child(4) { width: 220px; height: 220px; top: 25%; left: 85%; animation-duration: 42s; background: rgba(72, 202, 228, 0.15); }
+    .shape:nth-child(5) { width: 150px; height: 150px; top: 40%; left: 40%; animation-duration: 36s; background: rgba(45, 212, 160, 0.1); }
+
+    @keyframes float {
+      0% { transform: translate(0, 0) scale(1); }
+      50% { transform: translate(-25px, 30px) scale(1.05); }
+      100% { transform: translate(0, 0) scale(1); }
+    }
+
+    .container {
+      max-width: 1250px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    /* header */
+    header {
+      text-align: center;
+      margin-bottom: 2.8rem;
+      padding: 3rem 2rem;
+      background: rgba(13, 20, 32, 0.8);
+      backdrop-filter: blur(20px);
+      border-radius: 3rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 50px rgba(42, 109, 244, 0.25);
+      border: 1px solid rgba(91, 157, 255, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 6px;
+      background: linear-gradient(90deg, #2a6df4, #f472b6, #ff9f43, #2dd4a0);
+      box-shadow: 0 0 20px rgba(42, 109, 244, 0.5);
+    }
+    .hero-icon {
+      font-size: 4.5rem;
+      margin-bottom: 0.8rem;
+      background: linear-gradient(135deg, #5b9dff, #f472b6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      filter: drop-shadow(0 0 25px rgba(244, 114, 182, 0.7));
+      display: inline-block;
+      animation: bounce 2.5s infinite alternate;
+    }
+    @keyframes bounce {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
+    }
+    h1 {
+      background: linear-gradient(135deg, #d6e4ff, #f5c6e0, #ffe0b2);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-size: 3.2rem;
+      margin-bottom: 0.4rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-shadow: 0 0 30px rgba(244, 114, 182, 0.5);
+    }
+    .subtitle {
+      color: #d3b8ff;
+      font-size: 1.3rem;
+      font-weight: 300;
+      letter-spacing: 0.5px;
+    }
+
+    /* quick menu nav */
+    .section-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.8rem 1.5rem;
+      margin: 1.8rem 0 2rem;
+      background: rgba(13, 20, 32, 0.7);
+      backdrop-filter: blur(10px);
+      padding: 1rem 2rem;
+      border-radius: 3rem;
+      border: 1px solid rgba(91, 157, 255, 0.2);
+    }
+    .section-nav a {
+      color: #e0d9ff;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: 2rem;
+      transition: all 0.2s;
+      font-size: 0.95rem;
+      letter-spacing: 0.3px;
+    }
+    .section-nav a i {
+      margin-right: 0.4rem;
+      color: #f472b6;
+    }
+    .section-nav a:hover {
+      background: rgba(244, 114, 182, 0.2);
+      color: #ffffff;
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    /* cards */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.8rem;
+      margin-bottom: 3rem;
+    }
+    .card {
+      background: var(--dark-card);
+      backdrop-filter: blur(12px);
+      border-radius: 2rem;
+      padding: 2rem 1.8rem;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 20px rgba(42, 109, 244, 0.15);
+      transition: transform 0.25s, box-shadow 0.3s, border-color 0.3s;
+      border: 1px solid rgba(91, 157, 255, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+    .card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #2a6df4, #f472b6, #ff9f43);
+      opacity: 0.9;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 45px rgba(0, 0, 0, 0.7), 0 0 35px rgba(244, 114, 182, 0.4);
+      border-color: rgba(244, 114, 182, 0.6);
+    }
+    .card-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      background: linear-gradient(135deg, #5b9dff, #f472b6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      filter: drop-shadow(0 0 8px rgba(244, 114, 182, 0.5));
+    }
+    .card h2 {
+      color: #f0d9ff;
+      font-size: 1.5rem;
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+    }
+    .card p {
+      margin-bottom: 0.6rem;
+      color: #d4c3f0;
+    }
+    .tip {
+      color: #b0f0dd;
+      background: rgba(45, 212, 160, 0.12);
+      padding: 0.6rem 1rem;
+      border-radius: 1.2rem;
+      margin-top: 1rem;
+      display: inline-block;
+      border-left: 4px solid var(--success);
+      font-weight: 500;
+    }
+    .highlight {
+      color: #ffb5c7;
+      font-weight: 600;
+    }
+    .badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #f472b6, #ff9f43);
+      color: #1a0e1e;
+      padding: 0.2rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      margin-left: 0.5rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+
+    .vital-note, .important-structure, .warning-box {
+      background: rgba(13, 20, 32, 0.8);
+      backdrop-filter: blur(16px);
+      border-radius: 2rem;
+      padding: 2rem 2.2rem;
+      margin: 2.2rem 0;
+      border: 1px solid rgba(91, 157, 255, 0.2);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+      transition: box-shadow 0.3s;
+    }
+    .vital-note:hover, .important-structure:hover, .warning-box:hover {
+      box-shadow: 0 20px 45px rgba(244, 114, 182, 0.25);
+    }
+    .vital-note h3, .important-structure h3, .warning-box h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-weight: 600;
+      color: #f0c5ff;
+    }
+    .vital-link {
+      background: rgba(244, 114, 182, 0.12);
+      padding: 0.7rem 1.3rem;
+      border-radius: 2rem;
+      display: inline-block;
+      word-break: break-word;
+      margin-top: 0.5rem;
+      font-size: 1.05rem;
+      transition: background 0.2s;
+      border: 1px solid rgba(244, 114, 182, 0.4);
+    }
+    .vital-link:hover { background: rgba(244, 114, 182, 0.25); }
+
+    .code-block {
+      background: #0a0f1c;
+      border-radius: 1.2rem;
+      padding: 1.2rem 1.4rem;
+      font-family: 'JetBrains Mono', 'Fira Code', monospace;
+      font-size: 0.9rem;
+      color: #f0d9ff;
+      margin: 1.2rem 0;
+      border: 1px solid rgba(244, 114, 182, 0.3);
+      white-space: pre;
+      overflow-x: auto;
+      box-shadow: inset 0 0 20px rgba(0,0,0,0.7);
+    }
+
+    /* license section */
+    .license-section {
+      background: rgba(13, 20, 32, 0.8);
+      backdrop-filter: blur(16px);
+      border-radius: 2rem;
+      padding: 1.8rem 2rem;
+      margin: 2.5rem 0;
+      border: 1px solid rgba(91, 157, 255, 0.2);
+      text-align: center;
+    }
+    .license-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .license-header h2 {
+      color: #f0c5ff;
+      font-size: 1.8rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+    .license-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.7rem;
+      background: linear-gradient(135deg, #f472b6, #ff9f43);
+      color: #1a0e1e;
+      padding: 0.9rem 1.8rem;
+      border-radius: 3rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-top: 1.2rem;
+      border: none;
+      cursor: pointer;
+      transition: all 0.25s;
+      text-decoration: none;
+      box-shadow: 0 10px 25px rgba(244, 114, 182, 0.5);
+    }
+    .license-button i {
+      font-size: 1.3rem;
+    }
+    .license-button:hover {
+      transform: translateY(-4px);
+      background: linear-gradient(135deg, #e35aa8, #f7822b);
+      box-shadow: 0 15px 35px rgba(244, 114, 182, 0.7);
+      text-decoration: none;
+    }
+
+    /* about */
+    .about {
+      background: rgba(13, 20, 32, 0.75);
+      backdrop-filter: blur(12px);
+      border-radius: 2rem;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      margin-bottom: 3rem;
+      border: 1px solid rgba(91, 157, 255, 0.2);
+    }
+    .about h2 { font-size: 2rem; color: #f0c5ff; margin-bottom: 2rem; }
+    .about-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+    .about-item { background: rgba(244, 114, 182, 0.07); padding: 1.5rem; border-radius: 1.5rem; transition: 0.2s; border: 1px solid rgba(244, 114, 182, 0.1); }
+    .about-item:hover { background: rgba(244, 114, 182, 0.18); transform: translateY(-5px); }
+    .about-item span { color: #ffb5c7; font-weight: 600; display: block; margin-bottom: 0.3rem; }
+    .copyright { margin-top: 2rem; color: #b08bc0; font-size: 0.9rem; }
+
+    a { color: #f0b0ff; text-decoration: none; transition: color 0.2s; }
+    a:hover { color: #ffffff; text-decoration: underline; }
+
+    .heart { color: #ff6b9d; animation: pulse 1.4s infinite; }
+    @keyframes pulse { 0% {transform: scale(1);} 50% {transform: scale(1.2);} 100% {transform: scale(1);} }
+
+    /* floating donation button — RED */
+    .floating-donate {
+      position: fixed;
+      bottom: 2.5rem;
+      right: 2.5rem;
+      z-index: 999;
+      background: linear-gradient(135deg, #ef4444, #b91c1c);
+      padding: 0.9rem 1.5rem;
+      border-radius: 50px;
+      box-shadow: 0 10px 30px rgba(239, 68, 68, 0.8), 0 0 40px rgba(239, 68, 68, 0.5);
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: #fff;
+      transition: all 0.25s ease;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      text-decoration: none;
+      animation: floatDonate 3s infinite;
+    }
+    .floating-donate i { font-size: 1.4rem; color: #ffc0c0; }
+    .floating-donate:hover {
+      transform: scale(1.07);
+      background: linear-gradient(135deg, #dc2626, #991b1b);
+      box-shadow: 0 18px 40px rgba(239, 68, 68, 1);
+      color: #fff;
+      text-decoration: none;
+    }
+    @keyframes floatDonate {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+      100% { transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .grid { grid-template-columns: 1fr; }
+      h1 { font-size: 2.2rem; }
+      .floating-donate { bottom: 1.5rem; right: 1.5rem; padding: 0.7rem 1rem; font-size: 0.9rem; }
+      .section-nav { gap: 0.5rem; padding: 0.8rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="floating-shapes">
+  <div class="shape"></div><div class="shape"></div><div class="shape"></div><div class="shape"></div><div class="shape"></div>
+</div>
+
+<!-- floating donation button (RED) -->
+<a href="https://anitafemboy.github.io/TKAMMNews/Donation.html" target="_blank" class="floating-donate" title="Support the project ❤️">
+  <i class="fas fa-heart"></i> Donate
+</a>
+
+<div class="container">
+  <header>
+    <div class="hero-icon"><i class="fas fa-puzzle-piece"></i></div>
+    <h1>WFF Mod Manager</h1>
+    <p class="subtitle">Your complete guide to managing mods for Wuchang Fallen Feathers</p>
+  </header>
+
+  <!-- quick section menu -->
+  <div class="section-nav">
+    <a href="#mod-enabler"><i class="fas fa-bolt"></i>Mod Enabler</a>
+    <a href="#ue4ss"><i class="fas fa-cogs"></i>UE4SS Structure</a>
+    <a href="#mod-management"><i class="fas fa-folder-open"></i>Manage Mods</a>
+    <a href="#tips"><i class="fas fa-lightbulb"></i>Tips</a>
+    <a href="#license"><i class="fas fa-file-contract"></i>License</a>
+    <a href="#about"><i class="fas fa-user"></i>About</a>
+  </div>
+
+  <!-- mod enabler important -->
+  <div class="vital-note" id="mod-enabler">
+    <h3><i class="fas fa-exclamation-triangle" style="color: #ffb86b;"></i> VERY IMPORTANT: Enable Mods First</h3>
+    <p>To activate any mods, you must first install <strong style="color:#ffd38a;">Wuchang Mod Enabler</strong> from Nexus Mods:</p>
+    <div class="vital-link">
+      <a href="https://www.nexusmods.com/wuchangfallenfeathers/mods/3?tab=files" target="_blank" style="font-weight: 600; color: #f0c5ff;">
+        <i class="fas fa-download"></i> Wuchang Mod Enabler on Nexus
+      </a>
+    </div>
+    <p style="margin-top: 1rem;"><span class="highlight">After installing and enabling it</span>, you can manage your custom mod list seamlessly.</p>
+  </div>
+
+  <!-- UE4SS & structure -->
+  <div class="important-structure" id="ue4ss">
+    <h3><i class="fas fa-exclamation-circle" style="color: #f472b6;"></i> UE4SS & Archive Structure (must read)</h3>
+    <p style="margin-bottom: 0.8rem;"><span class="highlight">If a mod requires UE4SS</span> (or uses UE4SS scripts), you <strong>must</strong> provide a <code>config.ini</code> with this exact structure:</p>
+    <div class="code-block">[Mod]
+script=<span style="color:#f472b6;">name_of_script_folder</span></div>
+    <p>The <span class="highlight">script folder</span> must be placed inside <strong>Your Mod folder</strong>, for example:</p>
+    <div class="code-block">📦 archive.zip
+├── Mainfile.pak
+├── 📁 scriptfolder (contains "Scripts" folder, etc...)
+│   └── Scripts
+│   └── etc...
+├── config.ini</div>
+    <p style="margin-top: 1.2rem;"><strong>ZIP / RAR / 7z archive rules:</strong></p>
+    <ul style="margin-left: 1.5rem; margin-bottom: 1rem; list-style-type: '👉 '; color: #e0d0f0;">
+      <li><strong>.pak</strong> files must be <span class="highlight">directly inside the archive</span> (not inside a nested folder).</li>
+      <li>If your mod has <strong>multiple variants</strong> (user must pick one), structure like this:</li>
+    </ul>
+    <div class="code-block">📦 archive.zip
+├── main_file.pak
+├── 📁 folder_option1
+│   └── file1.pak
+├── 📁 folder_option2
+│   └── file2.pak</div>
+    <p style="margin-top: 0.8rem;"><span class="highlight">❌ Wrong structure (do NOT use):</span></p>
+    <div class="code-block">📦 archive.zip
+├── 📁 some_folder
+│   └── main_file.pak
+├── 📁 folder_option1
+│   └── file1.pak</div>
+    <p class="tip" style="margin-top: 1rem;"><i class="fas fa-check-circle"></i> Correct structure ensures mods are detected and installed flawlessly.</p>
+  </div>
+
+  <!-- cards / mod management -->
+  <div class="grid" id="mod-management">
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-plus-circle"></i></div>
+      <h2>Add Mods <span class="badge">Quick</span></h2>
+      <p>Click <b>Add Mod</b> or drag & drop <b>.zip</b> / <b>.rar</b> files onto the app.</p>
+      <p>Add multiple files at once; mods extract automatically to the <b>mods</b> folder.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-folder-open"></i></div>
+      <h2>Select Mod Folder</h2>
+      <p>If a package contains multiple folders, choose the one containing main files (<b>.pak</b>).</p>
+      <p class="tip">This folder will appear in your <b>mods</b> directory automatically.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-toggle-on"></i></div>
+      <h2>Enabling Mods</h2>
+      <p>Use the toggle to <b>enable</b> a mod – instant activation.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-toggle-off"></i></div>
+      <h2>Disabling Mods</h2>
+      <p>Toggle off to disable a mod. All installed files of that mod will be removed.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-trash-alt"></i></div>
+      <h2>Deleting Mods</h2>
+      <p>Right-click a mod → <b>Delete Mod</b>. Removes it completely from your list.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-cog"></i></div>
+      <h2>Settings <span class="badge">Important</span></h2>
+      <p>Set the <b>Game Path</b> where <b>WuchangFallenFeathers.exe</b> is located, choose language.</p>
+      <p>You can also select a custom language.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-folder"></i></div>
+      <h2>Open Mods Folder</h2>
+      <p>Click <b>All Mods</b> to view imported mods. Right-click any mod to open its folder.</p>
+      <p><b>Installed Mods</b> shows active mods inside the game.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon"><i class="fas fa-mouse-pointer"></i></div>
+      <h2>Drag & Drop</h2>
+      <p>Drag <b>.zip</b>, <b>.rar</b> or <b>.7z</b> files directly onto the app to add mods.</p>
+    </div>
+    <div class="card" style="grid-column: span 2; background: rgba(30, 20, 50, 0.8);">
+      <div class="card-icon"><i class="fas fa-bolt"></i></div>
+      <h2>64-bit Optimized <span class="badge">New</span></h2>
+      <p>Built for modern systems with enhanced performance, stability, and memory handling for seamless mod management.</p>
+      <p class="tip">Experience faster loading times and smoother operation with our optimized architecture.</p>
+    </div>
+  </div>
+
+  <!-- tips section -->
+  <div class="warning-box" id="tips" style="margin-top: 2rem;">
+    <h3><i class="fas fa-lightbulb" style="color: #ffd38a;"></i> Notes & Tips</h3>
+    <ul style="margin-left: 1.5rem; list-style-type: '✓ '; color: #e0d0f0;">
+      <li style="margin-bottom: 0.5rem;">Only <b>.pak</b> files are supported.</li>
+      <li style="margin-bottom: 0.5rem;">Choose carefully if multiple folders appear.</li>
+      <li>Backup mods before overwriting.</li>
+    </ul>
+    <p style="margin-top: 1rem;"><span class="highlight">How to update:</span> Just copy paste then replace it all with old files :) easy.</p>
+  </div>
+
+  <!-- license section (button only) -->
+  <div class="license-section" id="license">
+    <div class="license-header">
+      <h2><i class="fas fa-file-contract"></i> License Agreement</h2>
+    </div>
+    <p style="color: #d4c3f0; margin-bottom: 1.2rem; max-width: 600px; margin-left: auto; margin-right: auto;">Please click the button below to view the full license text. By using WFF Mod Manager, you agree to the terms.</p>
+    <a href="https://github.com/AnitaFemboy/TKAMMNews/WFF_Mod_Manager/license.txt" target="_blank" class="license-button">
+      <i class="fas fa-external-link-alt"></i> View Full License Online
+    </a>
+  </div>
+
+  <!-- about section -->
+  <div class="about" id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <div class="about-item"><span>Creator:</span> Anita Femboy <span class="heart">♥</span></div>
+      <div class="about-item"><span>Instagram:</span> <a href="https://www.instagram.com/Anita.Femboy/" target="_blank">@Anita.Femboy</a></div>
+      <div class="about-item"><span>Email:</span> <a href="mailto:cutegirl2077x@gmail.com">cutegirl2077x@gmail.com</a></div>
+      <div class="about-item"><span>Feedback:</span> <a href="https://www.nexusmods.com/wuchangfallenfeathers/mods/421?tab=bugs" target="_blank">Submit Here</a></div>
+      <div class="about-item"><span>Telegram:</span> <a href="https://t.me/anitafemboy" target="_blank">@AnitaFemboy</a></div>
+    </div>
+    <div class="copyright">Copyright © Anita Corporation</div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // smooth scroll for menu links
+    document.querySelectorAll('.section-nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  });
+</script>
+</body>
+</html>
