@@ -1,15 +1,15 @@
-WFF MOD MANAGER LICENSE AGREEMENT
+TKA MOD MANAGER LICENSE AGREEMENT
 Author: Anita Femboy
 All Rights Reserved
 
-Effective Date: December 27, 2025
+Effective Date: September 01, 2025
 Author Jurisdiction: United States of America
 
 1. DEFINITIONS
-   1.1 "Software" means WFF Mod Manager and all executable binaries, object code, source code, libraries, modules, updates, patches, plugins, installers, installers’ scripts, assets, graphics, icons, audio, documentation, user guides, help files, technical notes, and any derivative works, in whatever form provided.
+   1.1 "Software" means TKA Mod Manager and all executable binaries, object code, source code, libraries, modules, updates, patches, plugins, installers, installers’ scripts, assets, graphics, icons, audio, documentation, user guides, help files, technical notes, and any derivative works, in whatever form provided.
    1.2 "Author" means Anita Femboy, the sole owner and licensor of the Software and all associated intellectual property.
    1.3 "Licensee" or "You" means the individual or entity that installs, uses, or receives the Software.
-   1.4 "Permitted Purpose" means use of the Software solely to manage game modifications (mods) for the video game Wuchang Fallen Feathers, and only as expressly permitted by this Agreement.
+   1.4 "Permitted Purpose" means use of the Software solely to manage game modifications (mods) for the video game The Killing Antidote, and only as expressly permitted by this Agreement.
    1.5 "Confidential Information" means non-public technical or business information disclosed by Author in any form relating to the Software, including but not limited to source code, object code, algorithms, design, internal interfaces, activation mechanisms, internal data formats, telemetry, and security measures.
 
 2. GRANT OF LICENSE
@@ -111,5 +111,5 @@ Author Jurisdiction: United States of America
 Author contact: Anita Femboy
 All rights reserved.
 
-Signature (Author): Anita Femboy     Date (Author): December 27, 2025
-Signature (Licensee): End User       Date (Licensee): December 27, 2025
+Signature (Author): Anita Femboy     Date (Author): September 01, 2025
+Signature (Licensee): End User       Date (Licensee): September 01, 2025
