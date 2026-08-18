@@ -30,6 +30,6 @@
 
 ---
 
-<sub>© 2024 Anita Corporation. All rights reserved.</sub>
+<sub>© Anita Corporation. All rights reserved.</sub>
 
 </div>
