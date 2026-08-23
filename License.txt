@@ -1,4 +1,4 @@
-TKA MOD MANAGER LICENSE AGREEMENT
+MANAGER LICENSE AGREEMENT
 Author: Anita Femboy
 All Rights Reserved
 
@@ -6,7 +6,7 @@ Effective Date: September 01, 2025
 Author Jurisdiction: United States of America
 
 1. DEFINITIONS
-   1.1 "Software" means TKA Mod Manager and all executable binaries, object code, source code, libraries, modules, updates, patches, plugins, installers, installers’ scripts, assets, graphics, icons, audio, documentation, user guides, help files, technical notes, and any derivative works, in whatever form provided.
+   1.1 "Software" means Mod Manager and all executable binaries, object code, source code, libraries, modules, updates, patches, plugins, installers, installers’ scripts, assets, graphics, icons, audio, documentation, user guides, help files, technical notes, and any derivative works, in whatever form provided.
    1.2 "Author" means Anita Femboy, the sole owner and licensor of the Software and all associated intellectual property.
    1.3 "Licensee" or "You" means the individual or entity that installs, uses, or receives the Software.
    1.4 "Permitted Purpose" means use of the Software solely to manage game modifications (mods) for the video game The Killing Antidote, and only as expressly permitted by this Agreement.
