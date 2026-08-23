@@ -1,115 +1,946 @@
-WFF MOD MANAGER LICENSE AGREEMENT
-Author: Anita Femboy
-All Rights Reserved
+# UNIVERSAL PROPRIETARY SOFTWARE
 
-Effective Date: September 01, 2025
-Author Jurisdiction: United States of America
+# END-USER LICENSE AGREEMENT
 
-1. DEFINITIONS
-   1.1 "Software" means WFF Mod Manager and all executable binaries, object code, source code, libraries, modules, updates, patches, plugins, installers, installers’ scripts, assets, graphics, icons, audio, documentation, user guides, help files, technical notes, and any derivative works, in whatever form provided.
-   1.2 "Author" means Anita Femboy, the sole owner and licensor of the Software and all associated intellectual property.
-   1.3 "Licensee" or "You" means the individual or entity that installs, uses, or receives the Software.
-   1.4 "Permitted Purpose" means use of the Software solely to manage game modifications (mods) for the video game The Killing Antidote, and only as expressly permitted by this Agreement.
-   1.5 "Confidential Information" means non-public technical or business information disclosed by Author in any form relating to the Software, including but not limited to source code, object code, algorithms, design, internal interfaces, activation mechanisms, internal data formats, telemetry, and security measures.
+## MASTER LICENSE — ALL SOFTWARE AND APPLICATIONS
 
-2. GRANT OF LICENSE
-   2.1 Subject to full compliance with this Agreement, the Author grants the Licensee a limited, non-exclusive, non-transferable, non-sublicensable, personal, revocable license to use the Software solely for the Permitted Purpose.
-   2.2 This license does not grant any ownership rights, title, or interest in the Software or any related intellectual property. All rights not expressly granted are reserved by the Author.
+**Software Covered:** All software applications, programs, utilities, tools, and digital products expressly identified by the Licensor as being distributed under this Master License.
 
-3. SCOPE AND LIMITATIONS
-   3.1 Prohibited Acts. Except as expressly permitted in this Agreement, the Licensee shall not, and shall not permit any third party to:
-   a) copy, reproduce, distribute, rent, lease, lend, sell, sublicense, host, mirror, or otherwise transfer the Software or any part thereof;
-   b) modify, translate, adapt, alter, patch, merge, create derivative works of, or otherwise change the Software;
-   c) decompile, disassemble, reverse engineer, decrypt, deobfuscate, or otherwise attempt to derive the source code or underlying structure, algorithms or logic of the Software;
-   d) remove, modify, tamper with, bypass or disable any license key, activation, registration, digital rights management (DRM), tamper-evident mechanisms, watermarking, telemetry, anti-debugging protections, or other security features embedded in the Software;
-   e) include or bundle the Software with any third-party product, distribution, mod pack, collection, or media without the prior written consent of the Author;
-   f) publicly reveal, publish, broadcast, stream, record, screenshot, or otherwise disclose any aspect of the Software’s interface, workflow, internal operation, documentation, or Confidential Information;
-   g) use the Software for any commercial purpose, including but not limited to resale, rental, hosting, enterprise deployment, provision of paid services, monetized streaming, or incorporation into paid content;
-   h) attempt to circumvent any technical, contractual, or legal protection afforded to the Software; or
-   i) permit access to or usage of the Software by any third party.
+**Licensor / Copyright Owner:** Anita Femboy
+**Publishing / Online Name:** Anita Femboy
+**Governing Law:** State of Delaware, United States of America, subject to mandatory applicable law
+**License Version:** Master License v1.0
+**Effective Date:** September 01, 2025
+**Legal Contact:** [cutegirlx@gmail.com](mailto:cutegirlx@gmail.com)
+**Security Contact:** [cutegirlx@gmail.com](mailto:cutegirlx@gmail.com)
+**Copyright:** Copyright © Anita Femboy. All Rights Reserved.
+**License Type:** Proprietary — All Rights Reserved
 
-3.2 Non-Transferability. The license is personal to the Licensee. The Licensee may not assign, sell, transfer, encumber, pledge, sub-license or otherwise convey the Software or any rights granted hereunder, in whole or in part.
+---
 
-4. CONFIDENTIALITY
-   4.1 The Software, including all non-public functionality and technical details, is Confidential Information. The Licensee shall hold Confidential Information in strict confidence, shall not disclose it to any third party, and shall use it solely for the Permitted Purpose.
-   4.2 The Licensee shall implement and maintain reasonable administrative, physical and technical safeguards to prevent unauthorized disclosure or use of Confidential Information.
-   4.3 Confidentiality obligations survive termination or expiration of this Agreement.
+# 1. ACCEPTANCE
 
-5. AUDIT, COMPLIANCE AND VERIFICATION
-   5.1 The Author reserves the right to audit, inspect, or require verification of any system, device, or environment where the Software is installed or used, to confirm compliance with this Agreement. The Licensee must cooperate fully and promptly with any such audit or request for information.
-   5.2 The Author may, at its sole discretion, require proof of deletion, secure erasure, or certification of destruction of all copies of the Software upon termination or upon reasonable request.
+THIS END-USER LICENSE AGREEMENT ("AGREEMENT") IS A LEGALLY BINDING AGREEMENT BETWEEN ANITA FEMBOY ("LICENSOR", "AUTHOR", "WE", "US", OR "OUR") AND THE INDIVIDUAL OR LEGAL ENTITY THAT INSTALLS, COPIES, ACCESSES, EXECUTES, ACTIVATES, DOWNLOADS, RECEIVES, PURCHASES, OR USES THE SOFTWARE ("LICENSEE", "YOU", OR "YOUR").
 
-6. TELEMETRY, DATA COLLECTION AND PRIVACY
-   6.1 The Software may include telemetry, usage reporting, activation or anti-piracy features that collect technical, usage, diagnostic, crash, license, or device information. By installing or using the Software, the Licensee consents to such collection, transmission, storage, and processing by the Author for purposes including license enforcement, security, product improvement, and analytics.
-   6.2 The Author will use and retain collected data in accordance with applicable law. The Licensee acknowledges that telemetry, logging, or remote verification mechanisms may detect or prevent unauthorized copying, distribution, modification, or misuse of the Software.
-   6.3 The Author is not the controller of any personal data that the Licensee chooses to upload or that is generated by the Licensee’s use of the Software; Licensee remains responsible for compliance with any privacy laws applicable to such data.
+BY INSTALLING, COPYING, EXECUTING, ACCESSING, ACTIVATING, DOWNLOADING, PURCHASING, OR USING THE SOFTWARE, YOU ACKNOWLEDGE THAT YOU HAVE READ, UNDERSTOOD, AND AGREE TO BE BOUND BY THIS AGREEMENT.
 
-7. UPDATES, PATCHES AND SUPPORT
-   7.1 The Author may provide updates, patches, or new versions of the Software at its discretion. All updates are subject to the terms of this Agreement unless a separate license accompanies an update.
-   7.2 The Author has no obligation to provide maintenance, support, updates, or bug fixes unless agreed in writing.
+IF YOU DO NOT AGREE TO THIS AGREEMENT, YOU MUST NOT INSTALL, COPY, EXECUTE, ACCESS, ACTIVATE, DOWNLOAD, PURCHASE, OR USE THE SOFTWARE.
 
-8. TERM AND TERMINATION
-   8.1 This Agreement is effective upon installation, copying, or use of the Software by the Licensee and continues until terminated.
-   8.2 This Agreement and the license granted hereunder shall terminate automatically, without notice, upon any breach by the Licensee of any term, condition, or restriction herein.
-   8.3 Upon termination for any reason, the Licensee must immediately cease using the Software and permanently delete or destroy all copies, full or partial, including backups, and provide written certification of deletion if requested by the Author.
-   8.4 Termination does not limit the Author’s right to pursue any other remedies available at law or equity for breach.
+WHERE APPLICABLE LAW REQUIRES OR RECOGNIZES EXPRESS ACCEPTANCE, ACCEPTANCE MAY OCCUR THROUGH AN "I AGREE" BUTTON, CHECKBOX, ELECTRONIC SIGNATURE, PURCHASE, ACTIVATION, INSTALLATION, OR OTHER LEGALLY RECOGNIZED METHOD.
 
-9. REMEDIES, INJUNCTIVE RELIEF AND ENFORCEMENT
-   9.1 The Licensee acknowledges that unauthorized use, disclosure, distribution, modification, or reverse engineering of the Software would cause irreparable injury to the Author for which monetary damages would be inadequate. The Author shall be entitled to seek injunctive relief, including temporary restraining orders and preliminary and permanent injunctive relief, without posting bond, in addition to any other remedies available under law or in equity.
-   9.2 The Author may pursue all available legal and equitable remedies, including statutory damages, exemplary or punitive damages where permitted by law, and recovery of attorneys’ fees, costs, and expenses incurred in enforcing this Agreement.
+---
 
-10. INDEMNIFICATION
-    10.1 The Licensee shall indemnify, defend and hold harmless the Author and its officers, agents, employees and representatives from and against any and all claims, liabilities, damages, losses, costs and expenses (including reasonable attorneys’ fees and court costs) arising out of or related to the Licensee’s: (a) breach of this Agreement; (b) unauthorized use, distribution, modification, or disclosure of the Software; (c) use of the Software in violation of applicable law; or (d) any negligence, willful misconduct or fraud in connection with the Software.
+# 2. DEFINITIONS
 
-11. WARRANTY DISCLAIMER
-    11.1 THE SOFTWARE IS PROVIDED "AS IS", "WITH ALL FAULTS" AND "AS AVAILABLE". THE AUTHOR EXPRESSLY DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, QUIET ENJOYMENT, TITLE, AND NON-INFRINGEMENT, AND ANY WARRANTIES ARISING FROM COURSE OF DEALING, COURSE OF PERFORMANCE, OR USAGE IN TRADE.
-    11.2 THE AUTHOR DOES NOT WARRANT THAT THE SOFTWARE WILL MEET LICENSEE’S REQUIREMENTS, BE UNINTERRUPTED, TIMELY, SECURE, ERROR-FREE, OR FREE FROM VULNERABILITIES.
+## 2.1 Software
 
-12. LIMITATION OF LIABILITY
-    12.1 TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, LOSS OF DATA, LOSS OF USE, INTERRUPTION OF BUSINESS, OR COST OF PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES, ARISING OUT OF OR IN CONNECTION WITH THIS AGREEMENT OR THE SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
-    12.2 IN NO EVENT SHALL THE AUTHOR’S AGGREGATE LIABILITY ARISING OUT OF OR RELATED TO THIS AGREEMENT EXCEED THE GREATER OF (A) THE AMOUNT PAID BY LICENSEE TO THE AUTHOR FOR THE SOFTWARE IN THE TWELVE (12) MONTHS PRIOR TO THE CLAIM, OR (B) ONE HUNDRED U.S. DOLLARS (USD 100). THE FOREGOING LIMITATION SHALL APPLY NOTWITHSTANDING THE FAILURE OF ESSENTIAL PURPOSE OF ANY LIMITED REMEDY.
+"Software" means each software product expressly distributed under this Master License, including its applicable versions, editions, builds, releases, updates, upgrades, patches, and components supplied by the Licensor.
 
-13. EXPORT, Sanctions AND COMPLIANCE
-    13.1 The Licensee shall comply with all applicable export control laws and sanctions regimes. The Software may be subject to export control laws. The Licensee warrants that it is not located in, under the control of, or a national or resident of any country subject to comprehensive U.S., EU or other applicable sanctions, and shall not use or transfer the Software in violation of such laws.
-    13.2 The Licensee shall comply with all applicable laws, rules and regulations in connection with its use of the Software.
+Software may include, without limitation:
 
-14. THIRD-PARTY COMPONENTS
-    14.1 The Software may incorporate third-party software, libraries, or components subject to separate license terms. Licensee agrees to comply with any such third-party license terms. To the extent any third-party license imposes additional obligations, such obligations shall be binding on the Licensee.
+* executable files;
+* binaries;
+* object code;
+* source code;
+* libraries;
+* modules;
+* plugins;
+* extensions;
+* scripts;
+* installers;
+* installation programs;
+* configuration files;
+* databases;
+* APIs;
+* SDKs;
+* interfaces;
+* graphical user interfaces;
+* icons;
+* logos;
+* artwork;
+* graphics;
+* photographs;
+* animations;
+* audio;
+* video;
+* music;
+* fonts;
+* documentation;
+* manuals;
+* help files;
+* websites;
+* web applications;
+* online services;
+* server components;
+* cloud components;
+* authentication systems;
+* activation systems;
+* licensing systems;
+* telemetry systems;
+* security systems;
+* anti-tampering mechanisms;
+* cryptographic mechanisms;
+* digital signatures;
+* metadata;
+* and other materials supplied by the Licensor.
 
-15. FEEDBACK
-    15.1 Any feedback, suggestions, or ideas provided by the Licensee relating to the Software (“Feedback”) shall be the exclusive property of the Author. By submitting Feedback, the Licensee assigns to the Author all right, title and interest in and to the Feedback, and authorizes the Author to use, modify, and commercialize the Feedback without restriction or remuneration.
+Software does not include Third-Party Components to the extent such components are owned or controlled by third parties.
 
-16. NOTICES
-    16.1 All notices required or permitted should be in writing and delivered electronically to the Author at the contact information provided with the Software or to such other address as the Author designates. Notice shall be deemed given when delivered by confirmed electronic transmission or forty-eight (48) hours after deposit with an internationally recognized overnight courier service.
+## 2.2 Documentation
 
-17. SEVERABILITY, WAIVER, ASSIGNMENT
-    17.1 If any provision of this Agreement is held invalid or unenforceable, the remaining provisions shall remain in full force and effect. The parties agree to replace any invalid provision with a valid provision that most closely approximates the intent and economic effect of the invalid provision.
-    17.2 No waiver by the Author of any breach shall constitute a waiver of any other or subsequent breach.
-    17.3 The Licensee may not assign or transfer this Agreement or any rights hereunder without the prior written consent of the Author. Any attempted assignment without such consent is null and void.
+"Documentation" means all manuals, instructions, technical documentation, specifications, help files, guides, tutorials, websites, and other materials supplied by the Licensor concerning the Software.
 
-18. SURVIVAL
-    18.1 The provisions of Sections 1, 3, 4, 5, 6, 8, 9, 10, 11, 12, 14, 15, 17 and 19 shall survive termination or expiration of this Agreement.
+## 2.3 Intellectual Property
 
-19. GOVERNING LAW, JURISDICTION AND INTERNATIONAL ENFORCEMENT
-    19.1 This Agreement shall be governed by and construed in accordance with the laws of the Author Jurisdiction specified above, without regard to conflict of laws principles.
-    19.2 The parties submit to the exclusive jurisdiction and venue of the competent courts of the Author Jurisdiction for resolution of any disputes arising out of or related to this Agreement. The Author shall be entitled to seek enforcement of any judgment or order in any other jurisdiction and may pursue cross-border enforcement under international treaties and conventions including, where applicable, the Berne Convention, TRIPS Agreement, and WIPO treaties.
-    19.3 Nothing in this Section limits the Author’s right to seek provisional or protective measures (including ex parte relief) in any jurisdiction.
+"Intellectual Property" includes copyrights and related rights, trademarks, service marks, trade names, logos, trade dress, patents, patent rights, designs, trade secrets, know-how, confidential information, database rights, software rights, domain names, and other intellectual-property rights recognized under applicable law.
 
-20. REMEDIES CUMULATIVE
-    20.1 All remedies contained in this Agreement are cumulative and in addition to any other remedies available at law or in equity.
+## 2.4 License Key
 
-21. ENTIRE AGREEMENT
-    21.1 This Agreement constitutes the entire agreement between the parties concerning the Software and supersedes all prior or contemporaneous agreements, understandings, representations and communications, whether oral or written, relating thereto. Any modifications or exceptions must be made in a written instrument signed by an authorized representative of the Author.
+"License Key" means any product key, serial number, activation code, token, certificate, account entitlement, credential, license file, digital license, or other mechanism used to authorize Software use.
 
-22. ACCEPTANCE
-    22.1 By installing, copying, executing, accessing, or using the Software in any manner, the Licensee acknowledges that it has read, understood, and agreed to be bound by all terms and conditions of this Agreement. If the Licensee does not agree to these terms, the Licensee must immediately cease installation and use and delete all copies of the Software.
+## 2.5 Third-Party Components
 
-23. MISCELLANEOUS
-    23.1 Remedies for breach may include injunctive relief, seizure, and permanent injunction prohibiting use or distribution.
-    23.2 The Author may modify, update, or replace this Agreement at any time for future distributions of the Software; such changes will not retroactively alter rights granted prior to modification absent the Author’s express written notice.
+"Third-Party Components" means software, libraries, frameworks, assets, fonts, services, APIs, content, or other materials owned or licensed by third parties and incorporated into, distributed with, or used by the Software.
 
-Author contact: Anita Femboy
-All rights reserved.
+## 2.6 Derivative Work
 
-Signature (Author): Anita Femboy     Date (Author): September 01, 2025
-Signature (Licensee): End User       Date (Licensee): September 01, 2025
+"Derivative Work" means a work based upon, incorporating, modifying, adapting, translating, transforming, extending, or otherwise deriving from the Software or a substantial portion thereof, to the extent such concept is recognized under applicable law.
+
+## 2.7 Licensor Materials
+
+"Licensor Materials" means the Software, Documentation, artwork, graphics, branding, interfaces, databases, source code, object code, algorithms, technical materials, and other materials owned or controlled by the Licensor.
+
+---
+
+# 3. OWNERSHIP
+
+## 3.1 Licensed, Not Sold
+
+THE SOFTWARE IS LICENSED, NOT SOLD.
+
+The Licensee receives only the limited rights expressly granted by this Agreement.
+
+## 3.2 Ownership Reserved
+
+Except for Third-Party Components and materials not owned by the Licensor, the Licensor retains all right, title, and interest in and to the Licensor Materials.
+
+## 3.3 No Ownership Transfer
+
+Purchase, download, installation, activation, subscription, payment, or possession of the Software does not transfer ownership of the Software or its Intellectual Property.
+
+## 3.4 Reservation of Rights
+
+**ALL RIGHTS NOT EXPRESSLY GRANTED TO THE LICENSEE ARE EXPRESSLY RESERVED BY THE LICENSOR.**
+
+No implied license, permission, authorization, ownership interest, or other right shall arise except where required by applicable law.
+
+---
+
+# 4. LICENSE GRANT
+
+Subject to continuous compliance with this Agreement, the Licensor grants the Licensee a:
+
+* limited;
+* non-exclusive;
+* non-transferable;
+* non-sublicensable;
+* non-assignable
+
+license to install and use the Software solely for its intended functionality and in accordance with this Agreement.
+
+The license does not grant ownership of the Software.
+
+---
+
+# 5. PERMITTED USE
+
+Subject to this Agreement and applicable law, the Licensee may:
+
+1. install the Software on devices for which the Licensee has a valid license;
+2. execute the Software;
+3. use the Software for its intended purpose;
+4. access Documentation supplied by the Licensor;
+5. create reasonable archival copies where legally permitted;
+6. create backup copies where legally permitted.
+
+All other rights remain reserved.
+
+---
+
+# 6. PROHIBITED ACTIVITIES
+
+Except where expressly permitted by this Agreement or mandatory applicable law, the Licensee shall not:
+
+## 6.1 Copy
+
+* reproduce the Software;
+* clone the Software;
+* duplicate the Software;
+* mirror the Software;
+* create unauthorized copies;
+* reproduce substantial portions of the Software;
+* or facilitate unauthorized copying.
+
+## 6.2 Distribute
+
+* sell;
+* resell;
+* rent;
+* lease;
+* loan;
+* sublicense;
+* publish;
+* upload;
+* mirror;
+* torrent;
+* share;
+* redistribute;
+* transmit;
+* transfer;
+* host;
+* or otherwise make the Software available to unauthorized third parties.
+
+## 6.3 Modify
+
+* modify;
+* patch;
+* alter;
+* adapt;
+* translate;
+* transform;
+* merge;
+* fork;
+* extend;
+* rewrite;
+* or create derivative works from the Software.
+
+## 6.4 Reverse Engineer
+
+**TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW**, the Licensee shall not:
+
+* reverse engineer;
+* decompile;
+* disassemble;
+* decrypt;
+* decode;
+* deobfuscate;
+* reconstruct;
+* inspect;
+* derive source code;
+* derive algorithms;
+* derive architecture;
+* derive internal implementation;
+* or otherwise attempt to discover the underlying structure or operation of the Software.
+
+This restriction does not prohibit activity that applicable law expressly protects.
+
+## 6.5 Circumvent Protection
+
+Except where expressly protected by mandatory applicable law, the Licensee shall not:
+
+* bypass activation;
+* bypass authentication;
+* bypass license verification;
+* bypass DRM;
+* bypass access controls;
+* bypass anti-tampering systems;
+* bypass integrity checks;
+* bypass encryption;
+* bypass security mechanisms;
+* remove technical restrictions;
+* defeat technological protection measures;
+* or assist another person in doing so.
+
+## 6.6 License Keys
+
+The Licensee shall not:
+
+* share License Keys;
+* publish License Keys;
+* sell License Keys;
+* transfer License Keys;
+* generate unauthorized License Keys;
+* forge License Keys;
+* emulate licensing servers;
+* manipulate activation systems;
+* or provide unauthorized activation services.
+
+## 6.7 Unauthorized Access
+
+The Licensee shall not permit unauthorized third parties to use the Software through:
+
+* shared accounts;
+* remote desktop;
+* remote execution;
+* cloud hosting;
+* virtualization;
+* streaming;
+* network sharing;
+* or substantially similar mechanisms,
+
+unless expressly authorized.
+
+## 6.8 Commercial Exploitation
+
+Unless separately authorized, the Licensee shall not use the Software itself as:
+
+* a hosted commercial service;
+* rental service;
+* resale product;
+* paid remote-access service;
+* commercial SaaS component;
+* or component of another commercial product or service.
+
+This restriction does not prohibit lawful internal business use where the applicable license permits such use.
+
+---
+
+# 7. COMPETITIVE USE
+
+To the maximum extent permitted by applicable law, the Licensee shall not use confidential information or information obtained through unauthorized analysis of the Software to create, develop, test, or improve a directly competing product.
+
+Nothing prohibits lawful independent development based solely on independently created work or lawfully available information.
+
+---
+
+# 8. INTELLECTUAL PROPERTY PROTECTION
+
+The Licensee shall not remove, obscure, alter, or modify:
+
+* copyright notices;
+* trademark notices;
+* ownership notices;
+* license notices;
+* watermarks;
+* attribution notices;
+* digital signatures;
+* security notices;
+* or other proprietary markings.
+
+---
+
+# 9. TRADEMARKS AND BRANDING
+
+All trademarks, logos, product names, service marks, trade names, and branding associated with the Software belong to the Licensor or their respective owners.
+
+No trademark license is granted by this Agreement.
+
+The Licensee shall not represent that it is affiliated with, endorsed by, sponsored by, or authorized by the Licensor unless expressly authorized.
+
+---
+
+# 10. CONFIDENTIAL INFORMATION
+
+Non-public information concerning the Software shall be treated as confidential to the maximum extent permitted by applicable law.
+
+Confidential information may include:
+
+* source code;
+* algorithms;
+* architecture;
+* unpublished features;
+* internal APIs;
+* security mechanisms;
+* licensing mechanisms;
+* technical Documentation;
+* development information;
+* unreleased products;
+* and internal business information.
+
+The Licensee shall not knowingly disclose confidential information without authorization.
+
+This obligation survives termination to the extent permitted by applicable law.
+
+---
+
+# 11. SECURITY AND ANTI-TAMPERING
+
+The Software may contain technical mechanisms designed to:
+
+* verify licenses;
+* prevent piracy;
+* detect tampering;
+* detect unauthorized modification;
+* protect accounts;
+* prevent fraud;
+* verify integrity;
+* protect Intellectual Property;
+* and maintain system security.
+
+The Licensee shall not interfere with or circumvent such mechanisms except where applicable law expressly protects the relevant activity.
+
+---
+
+# 12. TELEMETRY AND DIAGNOSTICS
+
+Where technically implemented and legally permitted, the Software may process technical information reasonably necessary for:
+
+* activation;
+* licensing;
+* authentication;
+* security;
+* fraud prevention;
+* crash diagnostics;
+* compatibility;
+* performance analysis;
+* error reporting;
+* service operation;
+* and product improvement.
+
+Personal-data processing shall be governed by the applicable Privacy Policy and applicable law.
+
+This Agreement does not itself constitute unlimited consent to personal-data processing.
+
+---
+
+# 13. PRIVACY
+
+Where the Software processes personal data, the Licensor shall provide an applicable Privacy Policy or privacy notice where required by law.
+
+Personal data shall be processed subject to applicable legal requirements concerning:
+
+* lawful basis;
+* transparency;
+* purpose limitation;
+* data minimization;
+* retention;
+* security;
+* data-subject rights;
+* and required disclosures.
+
+Nothing in this Agreement removes mandatory privacy rights.
+
+---
+
+# 14. THIRD-PARTY COMPONENTS
+
+The Software may contain Third-Party Components.
+
+Third-Party Components may be subject to separate license terms.
+
+Where a Third-Party Component is governed by an open-source or other third-party license that grants rights that cannot legally be restricted by this Agreement, those terms control with respect to that component.
+
+The Licensor does not claim ownership of Intellectual Property belonging to third parties.
+
+The Licensee remains responsible for complying with applicable Third-Party Component licenses.
+
+---
+
+# 15. LICENSE VERIFICATION
+
+The Software may use reasonable technical mechanisms to verify:
+
+* license validity;
+* activation status;
+* subscription status;
+* account status;
+* authorized devices;
+* software integrity;
+* fraud;
+* abuse;
+* or unauthorized distribution.
+
+Such mechanisms shall operate subject to applicable law and privacy requirements.
+
+---
+
+# 16. ONLINE SERVICES
+
+Certain Software features may require:
+
+* internet access;
+* servers;
+* APIs;
+* cloud infrastructure;
+* authentication;
+* online databases;
+* licensing servers;
+* or third-party services.
+
+Online functionality may be changed, suspended, discontinued, or replaced where legally permitted.
+
+The Licensor does not guarantee perpetual availability unless expressly agreed otherwise.
+
+---
+
+# 17. UPDATES AND UPGRADES
+
+The Licensor may release:
+
+* updates;
+* patches;
+* upgrades;
+* security fixes;
+* new versions;
+* feature changes;
+* compatibility changes;
+* or replacements.
+
+Unless expressly stated otherwise, updates remain subject to this Agreement.
+
+The Licensor does not guarantee that every update will preserve every previous feature.
+
+---
+
+# 18. USER CONTENT
+
+The Licensee retains ownership of independently created content supplied to the Software unless a separate agreement expressly provides otherwise.
+
+The Licensee is responsible for ensuring that its content does not violate applicable law or third-party rights.
+
+Nothing in this Agreement transfers ownership of independently created Licensee content to the Licensor.
+
+---
+
+# 19. FEEDBACK
+
+Any voluntary suggestions, recommendations, ideas, bug reports, or other feedback supplied to the Licensor may be used for lawful purposes without compensation.
+
+To the maximum extent permitted by law, the Licensee grants the Licensor a worldwide, perpetual, irrevocable, royalty-free, transferable, sublicensable license to use such Feedback.
+
+The Licensor has no obligation to implement Feedback.
+
+---
+
+# 20. EVALUATION AND BETA SOFTWARE
+
+Evaluation, beta, preview, experimental, development, testing, and early-access versions may:
+
+* contain errors;
+* contain incomplete functionality;
+* expire;
+* change without notice;
+* stop functioning;
+* contain diagnostic systems;
+* or be discontinued.
+
+Such versions are provided on an evaluation or development basis unless expressly stated otherwise.
+
+---
+
+# 21. SUPPORT
+
+Unless separately promised in writing, the Licensor has no obligation to provide:
+
+* technical support;
+* maintenance;
+* updates;
+* compatibility fixes;
+* bug fixes;
+* security fixes;
+* or continued availability.
+
+Any voluntarily provided support does not establish a continuing obligation.
+
+---
+
+# 22. LICENSE TERM
+
+This Agreement becomes effective when the Licensee installs, copies, downloads, activates, accesses, or uses the Software.
+
+The license continues until:
+
+* expiration of a limited license;
+* expiration of a subscription;
+* lawful termination;
+* or another legally valid termination event.
+
+---
+
+# 23. TERMINATION
+
+To the maximum extent permitted by applicable law, the Licensor may terminate the license following a material breach of this Agreement, including:
+
+* piracy;
+* unauthorized distribution;
+* license fraud;
+* unauthorized circumvention;
+* unauthorized commercial exploitation;
+* or serious violation of this Agreement.
+
+Upon lawful termination, the Licensee must cease unauthorized use and delete or destroy copies where legally required.
+
+Termination does not prevent the Licensor from pursuing lawful remedies for prior violations.
+
+---
+
+# 24. SURVIVAL
+
+The provisions concerning:
+
+* ownership;
+* Intellectual Property;
+* confidentiality;
+* restrictions;
+* disclaimers;
+* limitation of liability;
+* indemnification;
+* remedies;
+* dispute resolution;
+* and provisions intended by their nature to survive
+
+shall survive termination to the maximum extent permitted by applicable law.
+
+---
+
+# 25. WARRANTY DISCLAIMER
+
+**TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE SOFTWARE IS PROVIDED "AS IS", "AS AVAILABLE", AND "WITH ALL FAULTS".**
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE LICENSOR DISCLAIMS WARRANTIES NOT EXPRESSLY PROVIDED IN WRITING, INCLUDING IMPLIED WARRANTIES OF:
+
+* MERCHANTABILITY;
+* FITNESS FOR A PARTICULAR PURPOSE;
+* TITLE;
+* NON-INFRINGEMENT;
+* ACCURACY;
+* AVAILABILITY;
+* RELIABILITY;
+* SECURITY;
+* AND QUIET ENJOYMENT.
+
+THE LICENSOR DOES NOT WARRANT THAT THE SOFTWARE WILL:
+
+1. be error-free;
+2. be uninterrupted;
+3. meet every requirement;
+4. be compatible with every system;
+5. be free from vulnerabilities;
+6. remain available;
+7. retain every feature;
+8. or be free from data loss or corruption.
+
+Nothing in this section excludes a warranty, statutory protection, or consumer right that cannot lawfully be excluded.
+
+---
+
+# 26. LIMITATION OF LIABILITY
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THE LICENSOR SHALL NOT BE LIABLE FOR:
+
+* indirect damages;
+* incidental damages;
+* consequential damages;
+* special damages;
+* exemplary damages;
+* punitive damages;
+* lost profits;
+* lost revenue;
+* lost business;
+* lost goodwill;
+* lost data;
+* business interruption;
+* loss of opportunities;
+* or substitute products or services.
+
+TO THE MAXIMUM EXTENT PERMITTED BY LAW, THE LICENSOR'S TOTAL AGGREGATE LIABILITY ARISING FROM OR RELATING TO THE SOFTWARE OR THIS AGREEMENT SHALL NOT EXCEED THE GREATER OF:
+
+**(A)** the amount actually paid to the Licensor for the relevant Software during the twelve (12) months preceding the event giving rise to the claim; or
+
+**(B)** US $100.
+
+Nothing in this Agreement excludes or limits liability that cannot legally be excluded or limited.
+
+---
+
+# 27. INDEMNIFICATION
+
+To the maximum extent permitted by law, the Licensee shall indemnify and hold harmless the Licensor and the Licensor's officers, employees, contractors, agents, and representatives from claims, losses, damages, liabilities, costs, and reasonable legal expenses arising from:
+
+1. material breach of this Agreement;
+2. unauthorized use or distribution;
+3. unlawful use;
+4. infringement caused by Licensee-provided material;
+5. fraud;
+6. intentional misconduct;
+7. unauthorized modification;
+8. or unauthorized redistribution.
+
+This section does not require indemnification for the Licensor's own unlawful conduct where prohibited by applicable law.
+
+---
+
+# 28. EQUITABLE AND INJUNCTIVE RELIEF
+
+Unauthorized copying, distribution, disclosure, circumvention, or misuse of the Software may cause harm that cannot always be adequately compensated through monetary damages.
+
+To the extent permitted by law, the Licensor may seek:
+
+* temporary restraining orders;
+* preliminary injunctions;
+* permanent injunctions;
+* equitable relief;
+* orders requiring cessation of unauthorized use;
+* destruction or removal of unauthorized copies;
+* and other available legal remedies.
+
+---
+
+# 29. CUMULATIVE REMEDIES
+
+All remedies available to the Licensor under this Agreement or applicable law are cumulative to the maximum extent permitted by law.
+
+Use of one remedy does not waive another remedy.
+
+---
+
+# 30. COPYRIGHT AND INTELLECTUAL-PROPERTY ENFORCEMENT
+
+Unauthorized reproduction, distribution, public display, public performance, modification, or creation of derivative works may violate applicable intellectual-property law.
+
+The Licensor reserves all rights and remedies available under applicable law.
+
+Nothing in this Agreement limits any statutory rights or remedies available to the Licensor.
+
+---
+
+# 31. SECURITY RESEARCH
+
+Nothing in this Agreement is intended to prohibit activity that applicable law expressly protects, including legally protected security research, interoperability, accessibility, or other mandatory statutory exceptions.
+
+Security vulnerabilities may be reported to:
+
+**[cutegirlx@gmail.com](mailto:cutegirlx@gmail.com)**
+
+---
+
+# 32. EXPORT AND LEGAL COMPLIANCE
+
+The Licensee shall comply with applicable laws concerning possession, use, export, import, transfer, and distribution of the Software.
+
+The Software shall not knowingly be used for unlawful purposes.
+
+Nothing in this Agreement requires either party to violate applicable law.
+
+---
+
+# 33. GOVERNMENT USERS
+
+Where permitted by applicable procurement law, Software supplied to governmental entities shall be treated as commercial computer software and shall receive only those rights expressly granted under the applicable agreement.
+
+---
+
+# 34. AGE AND CAPACITY
+
+The Licensee represents that it has the legal capacity required to enter into this Agreement.
+
+Where parental or guardian authorization is legally required, such authorization must be obtained.
+
+---
+
+# 35. ASSIGNMENT
+
+The Licensee may not assign, transfer, sublicense, delegate, sell, or otherwise convey this Agreement or the license without prior written authorization, except where such restriction is prohibited by applicable law.
+
+The Licensor may assign this Agreement in connection with:
+
+* a merger;
+* acquisition;
+* restructuring;
+* sale of assets;
+* transfer of Intellectual Property;
+* sale of the Software;
+* or substantially similar transaction.
+
+---
+
+# 36. NO PARTNERSHIP
+
+Nothing in this Agreement creates:
+
+* a partnership;
+* joint venture;
+* agency;
+* employment relationship;
+* franchise;
+* fiduciary relationship;
+* or other business relationship.
+
+---
+
+# 37. SEVERABILITY
+
+If any provision is determined to be invalid, unlawful, or unenforceable, it shall be enforced to the maximum extent legally permissible.
+
+The remaining provisions shall remain effective.
+
+Where appropriate, an invalid provision shall be interpreted or replaced by a valid provision that most closely achieves its lawful purpose.
+
+---
+
+# 38. WAIVER
+
+Failure to enforce any provision does not constitute a waiver of that provision or any subsequent violation.
+
+A waiver must be express and legally valid.
+
+---
+
+# 39. ENTIRE AGREEMENT
+
+This Agreement, together with applicable:
+
+* Privacy Policies;
+* purchase terms;
+* subscription terms;
+* commercial agreements;
+* enterprise agreements;
+* Documentation;
+* and Third-Party Component licenses,
+
+constitutes the agreement concerning the Software, subject to mandatory applicable law.
+
+---
+
+# 40. ORDER OF PRECEDENCE
+
+If documents conflict:
+
+1. mandatory applicable law controls;
+2. applicable Third-Party Component licenses control their respective components;
+3. separately signed commercial or enterprise agreements control where expressly stated;
+4. this Agreement controls otherwise.
+
+---
+
+# 41. CHANGES TO THIS AGREEMENT
+
+The Licensor may modify this Agreement for future releases, distributions, versions, or products.
+
+Changes shall not retroactively remove mandatory legal rights or other rights that cannot lawfully be removed.
+
+The applicable version may be identified by license version, Software version, Effective Date, or another reasonable identifier.
+
+---
+
+# 42. GOVERNING LAW
+
+**TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, THIS AGREEMENT AND ANY DISPUTE ARISING OUT OF OR RELATING TO THE SOFTWARE OR THIS AGREEMENT SHALL BE GOVERNED BY AND CONSTRUED IN ACCORDANCE WITH THE LAWS OF THE STATE OF DELAWARE, UNITED STATES OF AMERICA, WITHOUT REGARD TO ITS CONFLICT-OF-LAWS PRINCIPLES.**
+
+The parties expressly intend Delaware law to govern the contractual relationship to the maximum extent legally permissible.
+
+Nothing in this section excludes mandatory law that cannot legally be excluded by agreement.
+
+Delaware law expressly permits parties meeting its statutory requirements to choose Delaware law for a contract, and Delaware courts have substantial jurisdiction over commercial and contractual matters. ([Delaware Code][2])
+
+---
+
+# 43. JURISDICTION AND VENUE
+
+**TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW**, the parties agree that courts located in the State of Delaware shall have jurisdiction over disputes arising from or relating to this Agreement.
+
+Where legally permitted, the parties consent to personal jurisdiction and venue in the applicable state or federal courts located in Delaware.
+
+The Licensor may seek temporary, preliminary, permanent, equitable, injunctive, or other protective relief in any court of competent jurisdiction where necessary to protect its Intellectual Property, confidential information, Software, or other legally protected interests.
+
+Nothing in this section prevents a court from exercising jurisdiction where mandatory law requires it.
+
+---
+
+# 44. INTERNATIONAL USE AND ENFORCEMENT
+
+The Software may be distributed or used internationally.
+
+Where the Software is used outside the United States, this Agreement applies subject to mandatory laws of the jurisdiction in which the Licensee is located or the transaction occurs.
+
+The Licensor reserves all rights and remedies available under applicable international, federal, state, and local law.
+
+Nothing in this section guarantees that every provision of this Agreement will be enforceable in every jurisdiction.
+
+---
+
+# 45. CONSUMER AND MANDATORY RIGHTS
+
+Nothing in this Agreement excludes, restricts, or waives a statutory consumer right, warranty, remedy, protection, interoperability right, accessibility right, privacy right, or other mandatory legal protection that cannot lawfully be excluded or restricted.
+
+Where mandatory applicable law grants the Licensee greater rights, those rights apply.
+
+Where mandatory applicable law grants the Licensor rights or remedies, those rights and remedies are reserved.
+
+---
+
+# 46. ELECTRONIC ACCEPTANCE
+
+Where legally permitted, this Agreement may be accepted through:
+
+* an "I Agree" button;
+* an acceptance checkbox;
+* electronic signature;
+* purchase;
+* activation;
+* installation;
+* download followed by use;
+* or continued use after reasonable notice.
+
+Electronic records may constitute evidence of acceptance where legally permitted.
+
+The Licensor may retain records of acceptance, license activation, purchase, or other transaction information where legally permitted and subject to applicable privacy requirements.
+
+---
+
+# 47. NO ORAL MODIFICATION
+
+No informal statement, support message, forum post, social-media statement, or verbal communication modifies this Agreement unless expressly authorized by the Licensor in a legally valid written instrument.
+
+---
+
+# 48. LEGAL NOTICES
+
+Legal notices concerning this Agreement or the Software should be directed to:
+
+**Licensor:** Anita Femboy
+**Publishing / Online Name:** Anita Femboy
+**Legal Contact:** [cutegirlx@gmail.com](mailto:cutegirlx@gmail.com)
+**Security Contact:** [cutegirlx@gmail.com](mailto:cutegirlx@gmail.com)
+**Governing Law:** Delaware, United States of America
+
+The Licensor may designate an alternative legal or security contact in a future version of this Agreement or in applicable Software documentation.
+
+---
+
+# 49. COPYRIGHT NOTICE
+
+**Copyright © Anita Femboy. All Rights Reserved.**
+
+No license is granted except as expressly provided by this Agreement or by a separate written license.
+
+The absence of a copyright notice does not constitute a waiver of copyright or other Intellectual Property rights.
+
+---
+
+# 50. FINAL ACKNOWLEDGEMENT
+
+BY INSTALLING, COPYING, EXECUTING, ACCESSING, ACTIVATING, DOWNLOADING, PURCHASING, OR USING SOFTWARE COVERED BY THIS AGREEMENT, THE LICENSEE ACKNOWLEDGES THAT:
+
+1. the Software is licensed and not sold;
+2. ownership remains with the Licensor except for third-party materials;
+3. all rights not expressly granted are reserved;
+4. unauthorized copying is prohibited;
+5. unauthorized distribution is prohibited;
+6. unauthorized modification is prohibited;
+7. unauthorized reverse engineering is prohibited to the maximum extent permitted by law;
+8. unauthorized circumvention of technical protections is prohibited to the maximum extent permitted by law;
+9. Intellectual Property rights remain protected;
+10. applicable privacy laws remain applicable;
+11. mandatory consumer and statutory rights remain applicable;
+12. Third-Party Component licenses remain applicable;
+13. the Licensee has had an opportunity to review this Agreement;
+14. the Licensee agrees to comply with this Agreement.
+
+**IF YOU DO NOT AGREE TO THIS AGREEMENT, DO NOT USE THE SOFTWARE.**
+
+---
+
+# LICENSOR INFORMATION
+
+**Publishing / Online Name:** Anita Femboy
+**Role:** Author / Developer / Licensor
+**Legal Contact:** [cutegirlx@gmail.com](mailto:cutegirlx@gmail.com)
+**Security Contact:** [cutegirlx@gmail.com](mailto:cutegirlx@gmail.com)
+**Governing Law:** State of Delaware, United States of America
+**Copyright:** Copyright © Anita Femboy. All Rights Reserved.
+**License:** Proprietary — All Rights Reserved
+**Master License Version:** 1.0
+**Effective Date:** September 01, 2025
+
+**ALL RIGHTS RESERVED.**
