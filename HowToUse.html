@@ -733,7 +733,7 @@ body{
         </div>
         <div class="section-title">
           Archive structure
-          <small>UE4SS · must read before packaging</small>
+          <small>UE4SS · images · description · must read before packaging</small>
         </div>
         <span class="must-read-badge">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:11px;height:11px"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
@@ -743,23 +743,14 @@ body{
 
       <div class="structure-wrap">
         <p class="lead-text">
-          If your mod requires <strong>UE4SS</strong> (or uses UE4SS scripts), include a <code>config.ini</code> at the root of the archive with this content:
-        </p>
-        <div class="code-block">
-[Mod]<br>
-script=<span class="hl">name_of_script_folder</span>
-        </div>
-
-        <p class="lead-text" style="margin-bottom:14px">
-          The script folder must sit <strong>directly inside</strong> your mod folder — not nested further:
+          <strong>config.ini is no longer used to point to a script folder.</strong> If your mod requires <strong>UE4SS</strong> scripts, just place the script folder directly inside your mod folder next to your <code>.pak</code> file — the app now detects it <strong>automatically</strong>. The old <code>script=</code> line is not needed anymore.
         </p>
         <div class="code-block">
 📦 archive.zip<br>
 ├── Mainfile.pak<br>
-├── 📁 scriptfolder/<br>
-│&nbsp;&nbsp;&nbsp;├── Scripts/<br>
-│&nbsp;&nbsp;&nbsp;└── ...<br>
-└── config.ini
+└── 📁 scriptfolder/<br>
+&nbsp;&nbsp;&nbsp;&nbsp;├── Scripts/<br>
+&nbsp;&nbsp;&nbsp;&nbsp;└── ...
         </div>
 
         <p class="lead-text" style="margin-top:20px;margin-bottom:12px"><strong>Rules for .zip / .rar / .7z packaging:</strong></p>
@@ -805,6 +796,47 @@ script=<span class="hl">name_of_script_folder</span>
         <div class="tip-box">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
           Correct structure ensures the app detects and installs your mod without any issues.
+        </div>
+
+        <p class="lead-text" style="margin-top:28px;margin-bottom:14px">
+          <strong>Mod images &amp; gallery:</strong> drop any images straight into the mod's root folder — name them whatever you like. Best naming convention: <code>1</code>, <code>2</code>, <code>3</code>, <code>4</code>... Images are sorted alphabetically, and whichever comes first — no matter what it's named — becomes the mod's <strong>main thumbnail</strong>.
+        </p>
+        <div class="code-block">
+📦 archive.zip<br>
+├── Mainfile.pak<br>
+├── 1.png &nbsp;<span style="color:var(--text-3)">← main thumbnail</span><br>
+├── 2.jpg<br>
+└── 3.webp
+        </div>
+        <div class="tip-box">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          Supported image formats: <strong>.png</strong> · <strong>.jpg</strong> · <strong>.jpeg</strong> · <strong>.bmp</strong> · <strong>.webp</strong>
+        </div>
+
+        <p class="lead-text" style="margin-top:28px;margin-bottom:14px">
+          <strong>Mod description:</strong> choose <u>one</u> of the two methods below — don't use both.
+        </p>
+        <div class="code-grid">
+          <div>
+            <div class="code-label ok">Option 1 — config.ini</div>
+            <div class="code-block" style="margin:0">
+[Mod]<br>
+description=<span class="hl">Your description here</span>
+            </div>
+          </div>
+          <div>
+            <div class="code-label ok">Option 2 — text file</div>
+            <div class="code-block" style="margin:0">
+description.txt<br>
+readme.txt<br>
+README.txt<br>
+README.md
+            </div>
+          </div>
+        </div>
+        <div class="tip-box">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          File names are case-insensitive, but use the exact name and extension shown above. The app loads the description automatically — no extra setup needed.
         </div>
       </div>
     </section>
@@ -905,11 +937,15 @@ script=<span class="hl">name_of_script_folder</span>
       <div class="notes-grid">
         <div class="note-item">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          <span>Only <strong>.pak</strong> and <strong>.mp4</strong> file types are supported.</span>
+          <span>Only <strong>.pak</strong> and <strong>.mp4</strong> file types are supported for mod files, plus <strong>.png / .jpg / .jpeg / .bmp / .webp</strong> for gallery images.</span>
         </div>
         <div class="note-item">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
           <span>When multiple folders appear during install, pick carefully — choose the one with your main files.</span>
+        </div>
+        <div class="note-item">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span>The mod's script folder is now detected automatically — <strong>config.ini</strong> is only needed if you want to add a description.</span>
         </div>
         <div class="note-item">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
